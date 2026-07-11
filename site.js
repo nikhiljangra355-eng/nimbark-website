@@ -132,6 +132,36 @@
     ));
   }
 
+  // ---------- Scroll progress bar + back-to-top ----------
+  function initScrollExtras() {
+    var bar = el('<div class="scroll-progress" aria-hidden="true"></div>');
+    document.body.appendChild(bar);
+
+    var topBtn = el(
+      '<button type="button" class="back-top" aria-label="Back to top">' +
+      '<svg viewBox="0 0 24 24"><path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"/></svg>' +
+      '</button>'
+    );
+    document.body.appendChild(topBtn);
+    topBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    var ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+        topBtn.classList.toggle('show', window.scrollY > 600);
+        ticking = false;
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   // ---------- Consultation modal ----------
   function buildModal() {
     var options = SERVICES.map(function (s) {
@@ -386,6 +416,7 @@
     buildFooter();
     buildFloaters();
     buildModal();
+    initScrollExtras();
     initNav();
     initForms();
     initCounters();
