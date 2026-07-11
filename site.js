@@ -56,7 +56,7 @@
       '</div></div>' +
       '<header class="header"><div class="container header-inner">' +
         '<a href="/" class="brand" aria-label="Nimbark Research Insights — home">' +
-          '<img src="/assets/logo.svg" alt="Nimbark Research Insights logo" class="brand-logo" width="52" height="52" />' +
+          '<img src="/assets/logo.png" alt="Nimbark Research Insights logo" class="brand-logo" width="52" height="52" />' +
           '<span class="brand-text"><span class="brand-name">NIMBARK</span><span class="brand-sub">RESEARCH INSIGHTS</span></span>' +
         '</a>' +
         '<nav class="nav" id="nav" aria-label="Main navigation">' +
@@ -88,7 +88,7 @@
       '<div class="container footer-grid">' +
         '<div class="footer-brand">' +
           '<a href="/" class="brand light">' +
-            '<img src="/assets/logo.svg" alt="Nimbark Research Insights logo" class="brand-logo" width="52" height="52" />' +
+            '<img src="/assets/logo.png" alt="Nimbark Research Insights logo" class="brand-logo" width="52" height="52" />' +
             '<span class="brand-text"><span class="brand-name">NIMBARK</span><span class="brand-sub">RESEARCH INSIGHTS</span></span>' +
           '</a>' +
           '<p class="footer-tagline">Searching &amp; Researching for Knowledge</p>' +
