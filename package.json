@@ -1,0 +1,9 @@
+{
+  "name": "nimbark-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nimbark Research Insights — company website (static frontend + Vercel serverless API)",
+  "engines": {
+    "node": ">=18"
+  }
+}
