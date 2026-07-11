@@ -96,7 +96,7 @@ async function sendEmail({ to, subject, html, replyTo }) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${key}` },
-    body: JSON.stringify({ from, to: [to], subject, html, ...(replyTo ? { reply_to: replyTo } : {}) }),
+    body: JSON.stringify({ from, to: Array.isArray(to) ? to : [to], subject, html, ...(replyTo ? { reply_to: replyTo } : {}) }),
   });
   if (!res.ok) {
     const detail = await res.text().catch(() => '');
@@ -200,7 +200,8 @@ module.exports = async function handler(req, res) {
   const subjectPrefix = saved ? '' : '[NOT SAVED TO DATABASE] ';
   const results = await Promise.allSettled([
     sendEmail({
-      to: 'info@nimbarkinsights.com',
+      to: (process.env.NOTIFY_EMAIL || 'info@nimbarkinsights.com')
+        .split(',').map((e) => e.trim()).filter(Boolean),
       subject: `${subjectPrefix}New enquiry from ${data.name}${data.service ? ` — ${data.service}` : ''}`,
       html: notificationHtml(data),
       replyTo: data.email,
