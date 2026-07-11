@@ -186,22 +186,22 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ success: false, error: errors.join(' ') });
   }
 
+  // The enquiry succeeds if it reaches the business by EITHER channel:
+  // saved to Supabase OR delivered by notification email. This keeps the
+  // form working even while one of the integrations is not yet configured.
+  let saved = false;
   try {
     await saveToSupabase(data);
+    saved = true;
   } catch (err) {
-    console.error('Enquiry save failed:', err.message);
-    return res.status(500).json({
-      success: false,
-      error: 'We could not save your enquiry right now. Please WhatsApp us at 99966-67152 or call 95881-42496.',
-    });
+    console.error('Enquiry save failed (check SUPABASE_URL / SUPABASE_SERVICE_KEY and that supabase-setup.sql was run):', err.message);
   }
 
-  // Emails are best-effort: the enquiry is already stored, so a mail failure
-  // should not turn the user's success into an error.
+  const subjectPrefix = saved ? '' : '[NOT SAVED TO DATABASE] ';
   const results = await Promise.allSettled([
     sendEmail({
       to: 'info@nimbarkinsights.com',
-      subject: `New enquiry from ${data.name}${data.service ? ` — ${data.service}` : ''}`,
+      subject: `${subjectPrefix}New enquiry from ${data.name}${data.service ? ` — ${data.service}` : ''}`,
       html: notificationHtml(data),
       replyTo: data.email,
     }),
@@ -214,6 +214,17 @@ module.exports = async function handler(req, res) {
   results.forEach((r) => {
     if (r.status === 'rejected') console.error('Email error:', r.reason);
   });
+  const notification = results[0];
+  const notified = notification.status === 'fulfilled' &&
+    notification.value && !notification.value.failed && !notification.value.skipped;
 
-  return res.status(200).json({ success: true });
+  if (saved || notified) {
+    return res.status(200).json({ success: true });
+  }
+
+  console.error('Enquiry lost: database save failed AND notification email failed/not configured. Visit /api/health for a configuration report.');
+  return res.status(500).json({
+    success: false,
+    error: 'We could not receive your enquiry right now.',
+  });
 };

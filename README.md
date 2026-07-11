@@ -89,6 +89,20 @@ vercel dev          # runs the site + API at http://localhost:3000
 
 Create a `.env` file (copy `.env.example`) for local API testing. Never commit `.env`.
 
+## Troubleshooting: "We could not receive/save your enquiry"
+
+Open **`https://<your-site>/api/health`** in your browser — it tells you exactly what's wrong:
+
+| What it shows | What to do |
+|---|---|
+| `"SUPABASE_URL": false` (or any env `false`) | Add the variable in Vercel → **Settings → Environment Variables**, then **redeploy** (Deployments → ⋯ → Redeploy). Env vars only take effect on a new deployment. |
+| `"database": "table_missing"` | Run `supabase-setup.sql` in Supabase → **SQL Editor**. |
+| `"database": "auth_failed"` | You pasted the wrong key. Use the **`service_role`** secret key (Project Settings → API Keys), not the `anon` key. |
+| `"database": "unreachable"` / `error_*` | Check `SUPABASE_URL` is exactly your Project URL, e.g. `https://abcdefgh.supabase.co`. |
+| `"healthy": true` | Everything is configured — the form saves and emails normally. |
+
+The form is designed to never lose a lead: if the database is down but Resend works, the enquiry is emailed to info@nimbarkinsights.com with a `[NOT SAVED TO DATABASE]` warning; if the API fails entirely, the visitor gets a pre-filled WhatsApp link.
+
 ## Notes for maintainers
 
 - **All enquiry forms** (contact page + the site-wide modal) POST to `/api/enquiry`, which validates (Indian 10-digit phone, email), applies rate limiting (5 per IP per hour, in-memory per serverless instance), a honeypot bot trap, saves to Supabase, and sends both emails via Resend.
