@@ -207,6 +207,13 @@
       e.preventDefault();
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
+      // On a service page, pre-select that service in the form
+      var match = location.pathname.match(/^\/services\/([a-z-]+)/);
+      if (match) {
+        var svc = SERVICES.filter(function (s) { return s.slug === match[1]; })[0];
+        var select = overlay.querySelector('select[name="service"]');
+        if (svc && select) select.value = svc.name;
+      }
       var first = overlay.querySelector('input[name="name"]');
       if (first) setTimeout(function () { first.focus(); }, 60);
     });
@@ -216,12 +223,20 @@
   function initNav() {
     var toggle = document.getElementById('navToggle');
     var nav = document.getElementById('nav');
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
+    var dim = el('<div class="nav-overlay" aria-hidden="true"></div>');
+    document.body.appendChild(dim);
+
+    function setOpen(open) {
+      nav.classList.toggle('open', open);
       toggle.classList.toggle('open', open);
+      dim.classList.toggle('show', open);
       toggle.setAttribute('aria-expanded', open);
       document.body.style.overflow = open ? 'hidden' : '';
+    }
+    toggle.addEventListener('click', function () {
+      setOpen(!nav.classList.contains('open'));
     });
+    dim.addEventListener('click', function () { setOpen(false); });
     nav.addEventListener('click', function (e) {
       var dd = document.getElementById('servicesDropdown');
       // On mobile, first tap on "Services" opens the submenu instead of navigating
@@ -231,9 +246,7 @@
         return;
       }
       if (e.target.closest('a') || e.target.closest('[data-open-modal]')) {
-        nav.classList.remove('open');
-        toggle.classList.remove('open');
-        document.body.style.overflow = '';
+        setOpen(false);
       }
     });
 
@@ -451,9 +464,19 @@
     nodes.forEach(function (n) { io.observe(n); });
   }
 
+  // ---------- Accessibility: skip-to-content link ----------
+  function initSkipLink() {
+    var target = document.querySelector('section, .content-wrap, .article-body, main');
+    if (!target) return;
+    if (!target.id) target.id = 'pageMain';
+    var link = el('<a href="#' + target.id + '" class="skip-link">Skip to main content</a>');
+    document.body.insertBefore(link, document.body.firstChild);
+  }
+
   // ---------- Boot ----------
   function boot() {
     buildHeader();
+    initSkipLink();
     buildFooter();
     buildFloaters();
     buildModal();
