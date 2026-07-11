@@ -161,8 +161,9 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .brand-top {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.35rem 1rem 0.32rem 0.5rem;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.32rem 0.7rem 0.3rem;
 }
 .brand-tagline {
   display: block;
