@@ -26,8 +26,7 @@ api/enquiries/[id].js       PATCH /api/enquiries/:id  (admin only)
 supabase-setup.sql          Database table setup
 vercel.json                 Clean URLs + security headers
 .env.example                Required environment variables
-public/logo.png             Logo (PNG)
-assets/                     Logo + favicon (SVG)
+assets/                     Logo (SVG + PNG) and favicon
 sitemap.xml, robots.txt     SEO
 ```
 
