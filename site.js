@@ -55,9 +55,12 @@
         '<div class="topbar-right"><a href="' + MAPS_URL + '" target="_blank" rel="noopener" class="topbar-item">' + ICON.pin + 'Opp. 3rd Gate KUK, Kurukshetra</a></div>' +
       '</div></div>' +
       '<header class="header"><div class="container header-inner">' +
-        '<a href="/" class="brand" aria-label="Nimbark Research Insights — home">' +
-          '<img src="/assets/logo.png" alt="Nimbark Research Insights logo" class="brand-logo" width="52" height="52" />' +
-          '<span class="brand-text"><span class="brand-name">NIMBARK</span><span class="brand-sub">RESEARCH INSIGHTS</span></span>' +
+        '<a href="/" class="brand brand-badge" aria-label="Nimbark Research Insights — home">' +
+          '<span class="brand-top">' +
+            '<img src="/assets/logo.png" alt="Nimbark Research Insights logo" class="brand-logo" width="42" height="42" />' +
+            '<span class="brand-text"><span class="brand-name">NIMBARK</span><span class="brand-sub">RESEARCH INSIGHTS</span></span>' +
+          '</span>' +
+          '<span class="brand-tagline">Searching &amp; Researching for Knowledge</span>' +
         '</a>' +
         '<nav class="nav" id="nav" aria-label="Main navigation">' +
           '<a href="/" class="nav-link" data-nav="home">Home</a>' +
@@ -87,11 +90,13 @@
       '<footer class="footer">' +
       '<div class="container footer-grid">' +
         '<div class="footer-brand">' +
-          '<a href="/" class="brand light">' +
-            '<img src="/assets/logo.png" alt="Nimbark Research Insights logo" class="brand-logo" width="52" height="52" />' +
-            '<span class="brand-text"><span class="brand-name">NIMBARK</span><span class="brand-sub">RESEARCH INSIGHTS</span></span>' +
+          '<a href="/" class="brand brand-badge">' +
+            '<span class="brand-top">' +
+              '<img src="/assets/logo.png" alt="Nimbark Research Insights logo" class="brand-logo" width="42" height="42" />' +
+              '<span class="brand-text"><span class="brand-name">NIMBARK</span><span class="brand-sub">RESEARCH INSIGHTS</span></span>' +
+            '</span>' +
+            '<span class="brand-tagline">Searching &amp; Researching for Knowledge</span>' +
           '</a>' +
-          '<p class="footer-tagline">Searching &amp; Researching for Knowledge</p>' +
           '<p>A trusted global platform for academic excellence, ethical publishing, and impactful research dissemination.</p>' +
         '</div>' +
         '<div class="footer-col"><h4>Quick Links</h4>' +

@@ -132,23 +132,50 @@ a.topbar-item:hover { color: var(--yellow-400); }
   gap: 1rem;
 }
 .brand { display: flex; align-items: center; gap: 0.7rem; }
-.brand-logo { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; background: #fff; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-logo { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; background: #fff; flex-shrink: 0; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-name {
   font-family: var(--font-display);
   font-weight: 900;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   color: var(--green-700);
   letter-spacing: 0.5px;
 }
 .brand-sub {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 2.4px;
-  color: var(--orange-600);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  color: var(--green-700);
 }
-.brand.light .brand-name { color: #fff; }
-.brand.light .brand-sub { color: var(--yellow-400); }
+
+/* Badge-style brand: bordered card with orange tagline strip */
+.brand-badge {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  background: #fff;
+  border: 2px solid var(--orange-500);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.brand-top {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.3rem 0.85rem 0.28rem 0.45rem;
+}
+.brand-tagline {
+  display: block;
+  background: var(--orange-500);
+  color: #fff;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.24rem 0.7rem 0.22rem;
+  white-space: nowrap;
+}
 
 .nav { display: flex; align-items: center; gap: 1.35rem; }
 .nav-link {
@@ -1171,6 +1198,10 @@ details.faq-item .faq-body {
 
 @media (max-width: 520px) {
   .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+  .brand-name { font-size: 1.05rem; }
+  .brand-sub { font-size: 0.52rem; letter-spacing: 1.8px; }
+  .brand-tagline { font-size: 0.48rem; letter-spacing: 1px; }
+  .brand-logo { width: 34px; height: 34px; }
   .contact-form, .enquiry-form { padding: 1.4rem; }
   .modal { padding: 1.6rem; }
   .testimonial-card { padding: 1.6rem 1.3rem; }
