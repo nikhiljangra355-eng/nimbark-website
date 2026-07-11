@@ -19,7 +19,7 @@
     { slug: 'synopsis-research-paper', name: 'Synopsis & Research Paper Writing' },
     { slug: 'data-analysis', name: 'Data Analysis & Interpretation' },
     { slug: 'journal-publication', name: 'Journal Publication Support' },
-    { slug: 'plagiarism-removal', name: 'Plagiarism Removal & Turnitin Report' },
+    { slug: 'plagiarism-removal', name: 'Plagiarism Removal & Plagiarism Report' },
     { slug: 'editing-proofreading', name: 'Academic Editing & Proofreading' },
     { slug: 'book-publishing', name: 'Book Publishing' },
     { slug: 'patent-copyright', name: 'Patent & Copyright Assistance' },
@@ -239,29 +239,56 @@
         button.disabled = true;
         button.innerHTML = '<span class="spinner"></span> Sending…';
 
+        // If the API can't take the enquiry for any reason, never lose the
+        // lead — offer a one-click WhatsApp message with the same details.
+        function showError(message) {
+          var lines = [
+            'Hello Nimbark Research Insights,', '',
+            'Name: ' + payload.name,
+            'Phone: ' + payload.phone,
+            'Email: ' + payload.email,
+            payload.service ? 'Service Required: ' + payload.service : '',
+            payload.message ? 'Message: ' + payload.message : ''
+          ].filter(Boolean).join('\n');
+          var waUrl = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(lines);
+          feedback.className = 'form-feedback error';
+          feedback.textContent = message + ' ';
+          var link = document.createElement('a');
+          link.href = waUrl;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          link.textContent = 'Send your enquiry on WhatsApp instead →';
+          link.style.fontWeight = '700';
+          link.style.textDecoration = 'underline';
+          feedback.appendChild(link);
+        }
+
         fetch('/api/enquiry', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         })
           .then(function (res) {
-            return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+            // Parse defensively: platform error pages may return non-JSON
+            return res.text().then(function (text) {
+              var data = null;
+              try { data = JSON.parse(text); } catch (err) { /* non-JSON response */ }
+              return { ok: res.ok, data: data };
+            });
           })
           .then(function (result) {
-            if (result.ok && result.data.success) {
+            if (result.ok && result.data && result.data.success) {
               feedback.className = 'form-feedback success';
               feedback.textContent = 'Thank you, ' + payload.name.split(' ')[0] +
                 '! Your enquiry has been received. Our team will contact you within 24 hours.';
               form.reset();
             } else {
-              feedback.className = 'form-feedback error';
-              feedback.textContent = (result.data && result.data.error) ||
-                'Something went wrong. Please try again or WhatsApp us at 99966-67152.';
+              showError((result.data && result.data.error) ||
+                'Something went wrong on our side.');
             }
           })
           .catch(function () {
-            feedback.className = 'form-feedback error';
-            feedback.textContent = 'Network error — please check your connection, or call us directly at 95881-42496.';
+            showError('Network error — please check your connection.');
           })
           .finally(function () {
             button.disabled = false;
