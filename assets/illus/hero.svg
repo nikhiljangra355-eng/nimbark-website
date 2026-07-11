@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" fill="none">
+<defs>
+  <linearGradient id="blob" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f7c948"/>
+    <stop offset="1" stop-color="#f5921e"/>
+  </linearGradient>
+  <linearGradient id="trunkg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8a5527"/>
+    <stop offset="1" stop-color="#6e421d"/>
+  </linearGradient>
+</defs>
+
+<!-- background blob -->
+<ellipse cx="265" cy="235" rx="215" ry="185" fill="url(#blob)"/>
+
+<!-- sun -->
+<g>
+  <circle cx="416" cy="96" r="34" fill="#f7c948"/>
+  <circle cx="416" cy="96" r="24" fill="#ffdd66"/>
+  <g stroke="#f7c948" stroke-width="7" stroke-linecap="round">
+    <path d="M416 46 v-14"/><path d="M416 146 v14"/><path d="M366 96 h-14"/><path d="M466 96 h14"/>
+    <path d="M381 61 l-10 -10"/><path d="M451 61 l10 -10"/><path d="M381 131 l-10 10"/><path d="M451 131 l10 10"/>
+  </g>
+</g>
+
+<!-- ground -->
+<ellipse cx="258" cy="392" rx="150" ry="18" fill="#e8830c" opacity="0.5"/>
+
+<!-- tree trunk and branches -->
+<path d="M247 388 L251 268 C240 246 214 232 196 226 L206 214 C228 224 244 238 252 252 C250 222 242 198 228 178 L244 172 C258 196 264 226 264 252 C272 234 290 218 310 210 L318 222 C296 232 276 250 269 270 L272 388 Z" fill="url(#trunkg)"/>
+
+<!-- foliage -->
+<circle cx="258" cy="128" r="62" fill="#2d6a30"/>
+<circle cx="188" cy="162" r="48" fill="#3d8b40"/>
+<circle cx="330" cy="162" r="48" fill="#3d8b40"/>
+<circle cx="222" cy="106" r="42" fill="#4caf50"/>
+<circle cx="298" cy="106" r="42" fill="#4caf50"/>
+<circle cx="152" cy="196" r="32" fill="#2d6a30"/>
+<circle cx="364" cy="196" r="32" fill="#2d6a30"/>
+
+<!-- knowledge dots in foliage -->
+<circle cx="212" cy="140" r="7" fill="#f7c948"/>
+<circle cx="300" cy="90" r="6" fill="#f5921e"/>
+<circle cx="336" cy="150" r="6" fill="#fdfaf3"/>
+<circle cx="176" cy="188" r="5" fill="#f5921e"/>
+<circle cx="262" cy="170" r="6" fill="#f7c948"/>
+
+<!-- floating books -->
+<g transform="rotate(-14 128 250)">
+  <rect x="106" y="238" width="46" height="30" rx="4" fill="#d64541"/>
+  <rect x="106" y="242" width="46" height="5" fill="#fdfaf3" opacity="0.85"/>
+</g>
+<g transform="rotate(12 400 258)">
+  <rect x="378" y="246" width="44" height="28" rx="4" fill="#2c6cb0"/>
+  <rect x="378" y="250" width="44" height="5" fill="#fdfaf3" opacity="0.85"/>
+</g>
+<g transform="rotate(-9 396 330)">
+  <rect x="376" y="318" width="40" height="26" rx="4" fill="#3d8b40"/>
+  <rect x="376" y="322" width="40" height="4.5" fill="#fdfaf3" opacity="0.85"/>
+</g>
+<g transform="rotate(10 122 330)">
+  <rect x="102" y="318" width="40" height="26" rx="4" fill="#f7c948"/>
+  <rect x="102" y="322" width="40" height="4.5" fill="#fdfaf3" opacity="0.85"/>
+</g>
+
+<!-- reader sitting against the trunk -->
+<g>
+  <!-- crossed legs -->
+  <path d="M216 384 C222 368 250 362 262 372 C276 362 302 368 306 384 C296 392 226 392 216 384 Z" fill="#37474f"/>
+  <!-- torso -->
+  <path d="M234 384 C232 350 240 322 261 322 C282 322 290 350 288 384 Z" fill="#f5921e"/>
+  <!-- arms holding book -->
+  <path d="M238 344 C230 352 228 362 232 370 L248 362 Z" fill="#f5921e"/>
+  <path d="M284 344 C292 352 294 362 290 370 L274 362 Z" fill="#f5921e"/>
+  <!-- head -->
+  <circle cx="261" cy="306" r="17" fill="#eab08a"/>
+  <path d="M244 300 C246 288 276 288 278 300 C272 292 266 290 261 290 C256 290 250 292 244 300 Z" fill="#2d2420"/>
+  <!-- open book -->
+  <path d="M230 366 C240 356 256 356 261 362 C266 356 282 356 292 366 L288 380 C280 372 268 372 261 378 C254 372 242 372 234 380 Z" fill="#d64541"/>
+  <path d="M235 364 C244 357 256 358 261 363 C266 358 278 357 287 364 L285 372 C277 366 266 366 261 371 C256 366 245 366 237 372 Z" fill="#fdfaf3"/>
+</g>
+
+<!-- sparkles -->
+<path d="M92 128 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z" fill="#f7c948"/>
+<path d="M448 300 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z" fill="#fdfaf3"/>
+<circle cx="80" cy="320" r="5" fill="#f5921e"/>
+<circle cx="452" cy="180" r="5" fill="#fdfaf3" opacity="0.9"/>
+</svg>
