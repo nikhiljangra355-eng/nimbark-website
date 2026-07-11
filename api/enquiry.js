@@ -64,7 +64,7 @@ async function saveToSupabase(data) {
   const key = process.env.SUPABASE_SERVICE_KEY;
   if (!url || !key) throw new Error('Supabase is not configured (SUPABASE_URL / SUPABASE_SERVICE_KEY missing).');
 
-  const res = await fetch(`${url.replace(/\/$/, '')}/rest/v1/enquiries`, {
+  const res = await fetch(`${url.replace(/\/rest\/v1\/?$/, '').replace(/\/$/, '')}/rest/v1/enquiries`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

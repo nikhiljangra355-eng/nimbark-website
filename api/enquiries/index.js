@@ -28,7 +28,7 @@ module.exports = async function handler(req, res) {
 
   try {
     const resp = await fetch(
-      `${url.replace(/\/$/, '')}/rest/v1/enquiries?select=*&order=created_at.desc`,
+      `${url.replace(/\/rest\/v1\/?$/, '').replace(/\/$/, '')}/rest/v1/enquiries?select=*&order=created_at.desc`,
       { headers: { apikey: key, Authorization: `Bearer ${key}` } }
     );
     if (!resp.ok) {

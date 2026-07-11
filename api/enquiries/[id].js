@@ -44,7 +44,7 @@ module.exports = async function handler(req, res) {
 
   try {
     const resp = await fetch(
-      `${url.replace(/\/$/, '')}/rest/v1/enquiries?id=eq.${encodeURIComponent(id)}`,
+      `${url.replace(/\/rest\/v1\/?$/, '').replace(/\/$/, '')}/rest/v1/enquiries?id=eq.${encodeURIComponent(id)}`,
       {
         method: 'PATCH',
         headers: {

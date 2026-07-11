@@ -27,7 +27,7 @@ module.exports = async function handler(req, res) {
   if (url && key) {
     try {
       const resp = await fetch(
-        `${url.replace(/\/$/, '')}/rest/v1/enquiries?select=id&limit=1`,
+        `${url.replace(/\/rest\/v1\/?$/, '').replace(/\/$/, '')}/rest/v1/enquiries?select=id&limit=1`,
         { headers: { apikey: key, Authorization: `Bearer ${key}` } }
       );
       if (resp.ok) {
