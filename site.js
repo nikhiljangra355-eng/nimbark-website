@@ -391,8 +391,49 @@
 
     carousel.querySelector('.prev').addEventListener('click', function () { go(index - 1); restart(); });
     carousel.querySelector('.next').addEventListener('click', function () { go(index + 1); restart(); });
+
+    // Touch swipe on mobile
+    var startX = null;
+    carousel.addEventListener('touchstart', function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    carousel.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var delta = e.changedTouches[0].clientX - startX;
+      if (Math.abs(delta) > 45) {
+        go(delta < 0 ? index + 1 : index - 1);
+        restart();
+      }
+      startX = null;
+    }, { passive: true });
+
     go(0);
     restart();
+  }
+
+  // ---------- Hero rotating services line ----------
+  function initRotator() {
+    var node = document.getElementById('heroRotator');
+    if (!node) return;
+    var words = [
+      'PhD Thesis Writing',
+      'Synopsis & Research Papers',
+      'SPSS · AMOS · R Data Analysis',
+      'UGC-CARE & Scopus Publication',
+      'Plagiarism Removal',
+      'Editing & Proofreading',
+      'Book Publishing with ISBN',
+      'Patent & Copyright Filing'
+    ];
+    var i = 0;
+    setInterval(function () {
+      i = (i + 1) % words.length;
+      node.style.animation = 'none';
+      // Force reflow so the entry animation replays
+      void node.offsetWidth;
+      node.textContent = words[i];
+      node.style.animation = '';
+    }, 2600);
   }
 
   // ---------- Scroll reveal ----------
@@ -421,6 +462,7 @@
     initForms();
     initCounters();
     initCarousel();
+    initRotator();
     initReveal();
   }
 

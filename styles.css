@@ -1380,3 +1380,68 @@ details.faq-item .faq-body {
   .ticker-track { animation: none; }
   .wa-float::before { animation: none; }
 }
+
+/* =====================================================
+   Upgrade round 2 — inner-page motion, rotator, 404
+   ===================================================== */
+
+/* Inner page hero entrance */
+.page-hero .breadcrumb, .page-hero h1, .page-hero > .container > p:not(.breadcrumb) {
+  animation: fadeUp 0.6s ease both;
+}
+.page-hero h1 { animation-delay: 0.1s; }
+.page-hero > .container > p:not(.breadcrumb) { animation-delay: 0.2s; }
+
+/* Hero rotating services line */
+.hero-rotator {
+  font-weight: 600;
+  color: var(--green-900);
+  margin: -0.9rem 0 1.8rem;
+  font-size: 1rem;
+  animation: fadeUp 0.7s ease 0.3s both;
+}
+.hero-rotator .rot-word {
+  display: inline-block;
+  color: var(--orange-600);
+  border-bottom: 2px dashed var(--yellow-400);
+  padding-bottom: 1px;
+  animation: rotIn 0.45s ease;
+}
+@keyframes rotIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gentle breathing on the hero circle */
+.hero-circle { animation: breathe 7s ease-in-out infinite; }
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.045); }
+}
+
+/* 404 page */
+.notfound {
+  min-height: 55vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--cream);
+}
+.notfound .code {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(4.5rem, 12vw, 8rem);
+  line-height: 1;
+  color: var(--green-700);
+}
+.notfound .code span { color: var(--orange-500); }
+.notfound h1 { font-family: var(--font-display); color: var(--green-900); font-size: 1.6rem; margin: 0.6rem 0; }
+.notfound p { color: var(--muted); max-width: 30rem; margin: 0 auto 1.6rem; }
+.notfound-actions { display: flex; gap: 0.9rem; justify-content: center; flex-wrap: wrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  .page-hero .breadcrumb, .page-hero h1, .page-hero > .container > p,
+  .hero-rotator, .hero-rotator .rot-word { animation: none; }
+  .hero-circle { animation: none; }
+}
