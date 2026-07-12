@@ -173,9 +173,10 @@ svg { fill: currentColor; }
   color: #dbe8db;
 }
 a.topbar-item:hover { color: var(--yellow-400); }
-.topbar-waicon { margin-left: -0.9rem; color: #4fe083; }
+.topbar-waicon { color: #4fe083; }
 .topbar-waicon:hover { color: #7bf0a6; }
 .topbar-waicon svg { width: 15px; height: 15px; }
+.topbar-num2 { margin-left: -1rem; }
 
 /* Social icons in the topbar (replaces the address) */
 .topbar-social { display: flex; gap: 0.5rem; align-items: center; }

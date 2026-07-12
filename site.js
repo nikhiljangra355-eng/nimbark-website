@@ -57,8 +57,8 @@
       '<div class="topbar"><div class="container topbar-inner">' +
         '<div class="topbar-left">' +
           '<a href="tel:' + PHONE_TEL + '" class="topbar-item">' + ICON.phone + PHONE_DISPLAY + '</a>' +
-          '<a href="tel:+919996667152" class="topbar-item">' + ICON.phone + '99966-67152</a>' +
           '<a href="https://wa.me/' + WHATSAPP + '" target="_blank" rel="noopener" class="topbar-item topbar-waicon" aria-label="WhatsApp on 99966-67152" title="WhatsApp on 99966-67152"><svg viewBox="0 0 24 24" class="icon-xs"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07a8.2 8.2 0 0 1-2.4-1.48 9 9 0 0 1-1.66-2.07c-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zM12.05 2A11.86 11.86 0 0 0 1.8 19.8L.1 24l4.3-1.13A11.85 11.85 0 1 0 12.05 2z"/></svg></a>' +
+          '<a href="tel:+919996667152" class="topbar-item topbar-num2">' + ICON.phone + '99966-67152</a>' +
           '<a href="mailto:' + EMAIL + '" class="topbar-item">' + ICON.mail + EMAIL + '</a>' +
         '</div>' +
         '<div class="topbar-right topbar-social">' +
