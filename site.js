@@ -12,7 +12,7 @@
   var PHONE_TEL = '+919588142496';
   var EMAIL = 'info@nimbarkinsights.com';
   var MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent('#1639/12, Ground Floor, Opp. 3rd Gate KUK, Kurukshetra, Haryana');
+    encodeURIComponent('#1640/12, Ground Floor, Opp. 3rd Gate KUK, Kurukshetra, Haryana');
 
   var SERVICES = [
     { slug: 'phd-thesis', name: 'PhD Thesis Assistance' },
@@ -53,7 +53,7 @@
           '<a href="tel:+919996667152" class="topbar-item">' + ICON.phone + '99966-67152</a>' +
           '<a href="mailto:' + EMAIL + '" class="topbar-item">' + ICON.mail + EMAIL + '</a>' +
         '</div>' +
-        '<div class="topbar-right"><a href="' + MAPS_URL + '" target="_blank" rel="noopener" class="topbar-item">' + ICON.pin + 'Opp. 3rd Gate KUK, Kurukshetra</a></div>' +
+        '<div class="topbar-right"><a href="' + MAPS_URL + '" target="_blank" rel="noopener" class="topbar-item">' + ICON.pin + '#1640/12, Ground Floor, Opp. 3rd Gate KUK, Kurukshetra</a></div>' +
       '</div></div>' +
       '<header class="header"><div class="container header-inner">' +
         '<a href="/" class="brand-img" aria-label="Nimbark Research Insights — home">' +
@@ -123,7 +123,7 @@
           '<a href="tel:' + PHONE_TEL + '">Call: ' + PHONE_DISPLAY + '</a>' +
           '<a href="https://wa.me/' + WHATSAPP + '" target="_blank" rel="noopener">WhatsApp: 99966-67152</a>' +
           '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>' +
-          '<a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1639/12, Ground Floor,<br/>Opp. 3rd Gate KUK, Kurukshetra,<br/>Haryana, India</a>' +
+          '<a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1640/12, Ground Floor,<br/>Opp. 3rd Gate KUK, Kurukshetra,<br/>Haryana, India</a>' +
         '</div>' +
       '</div>' +
       '<div class="footer-bottom"><div class="container"><p>© <span id="year"></span> Nimbark Research Insights. All rights reserved.</p></div></div>' +
