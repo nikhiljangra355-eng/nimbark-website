@@ -464,6 +464,33 @@
     }, 2600);
   }
 
+  // ---------- Hero story (3-scene loop) ----------
+  function initStory() {
+    var story = document.getElementById('heroStory');
+    if (!story) return;
+    var scenes = [].slice.call(story.querySelectorAll('.story-scene'));
+    var dots = [].slice.call(story.querySelectorAll('.story-dots span'));
+    var durations = [17000, 12500, 9500];
+    var i = 0;
+    function show(n) {
+      scenes.forEach(function (s, k) {
+        s.classList.toggle('active', k === n);
+        s.classList.remove('run');
+        if (k === n) {
+          void s.offsetWidth; // restart CSS animations
+          s.classList.add('run');
+        }
+      });
+      dots.forEach(function (d, k) { d.classList.toggle('on', k === n); });
+    }
+    show(0);
+    setTimeout(function next() {
+      i = (i + 1) % scenes.length;
+      show(i);
+      setTimeout(next, durations[i]);
+    }, durations[0]);
+  }
+
   // ---------- Scroll reveal ----------
   function initReveal() {
     var nodes = document.querySelectorAll('.reveal');
@@ -501,6 +528,7 @@
     initCounters();
     initCarousel();
     initRotator();
+    initStory();
     initReveal();
   }
 
