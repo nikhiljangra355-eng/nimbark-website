@@ -76,26 +76,50 @@ svg { fill: currentColor; }
 
 .btn-light { background: #fff; color: var(--orange-600); }
 
-/* FAQ "read all" button — clearly clickable: solid colour, lift + glow, nudging arrow */
+/* FAQ "read all" button — clearly clickable: pulsing glow, shine sweep, nudging arrow */
 .btn-faq-all {
-  box-shadow: 0 8px 22px rgba(245, 146, 30, 0.35);
+  position: relative;
+  overflow: hidden;
   padding: 0.9rem 2.2rem;
+  animation: faqPulse 2.2s ease-in-out infinite;
+}
+.btn-faq-all::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-22deg);
+  animation: btnShine 2.6s ease-in-out infinite;
+  pointer-events: none;
 }
 .btn-faq-all:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(245, 146, 30, 0.45);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 16px 34px rgba(245, 146, 30, 0.5);
+  animation: none;
 }
 .btn-faq-all .btn-arrow {
   display: inline-block;
   animation: arrowNudge 1.2s ease-in-out infinite;
 }
-.btn-faq-all:hover .btn-arrow { animation: none; transform: translateX(4px); }
+.btn-faq-all:hover .btn-arrow { animation: none; transform: translateX(5px); }
+@keyframes faqPulse {
+  0%, 100% { box-shadow: 0 8px 22px rgba(245, 146, 30, 0.35); transform: scale(1); }
+  50% { box-shadow: 0 12px 32px rgba(245, 146, 30, 0.6); transform: scale(1.03); }
+}
+@keyframes btnShine {
+  0% { left: -80%; }
+  55% { left: 130%; }
+  100% { left: 130%; }
+}
 @keyframes arrowNudge {
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(5px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .btn-faq-all .btn-arrow { animation: none; }
+  .btn-faq-all, .btn-faq-all::after, .btn-faq-all .btn-arrow { animation: none; }
 }
 
 .btn-whatsapp { background: #25d366; color: #fff; }
