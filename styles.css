@@ -1027,6 +1027,56 @@ details.faq-item .faq-body {
 .modal-close:hover { background: var(--cream); color: var(--ink); }
 .modal .enquiry-form { border: 0; padding: 0; box-shadow: none; }
 
+/* ---------- Embedded consultation section (home) ---------- */
+.consult-band { background: var(--green-900); }
+.consult-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+  align-items: center;
+}
+.section-tag.light { background: rgba(255, 255, 255, 0.1); color: var(--yellow-400); }
+.consult-copy h2 {
+  font-family: var(--font-display);
+  color: #ffffff;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1.25;
+  margin-bottom: 0.9rem;
+}
+.consult-copy > p { color: #c8d6c8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.4rem; }
+.consult-points { list-style: none; margin-bottom: 1.6rem; }
+.consult-points li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #e6efe6;
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+.consult-points svg { color: var(--yellow-400); flex-shrink: 0; }
+.consult-alt { border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 1.2rem; }
+.consult-alt p { color: #b9cbb9; font-size: 0.85rem; margin-bottom: 0.4rem; }
+.consult-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--yellow-400);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.consult-call:hover { color: #ffffff; }
+.consult-form h3 {
+  font-family: var(--font-display);
+  color: var(--green-900);
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+.consult-sub { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.2rem; }
+@media (max-width: 900px) {
+  .consult-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+}
+
 /* ---------- Footer ---------- */
 .footer { background: var(--green-900); color: #c8d6c8; }
 .footer-grid {
