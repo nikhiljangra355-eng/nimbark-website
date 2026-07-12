@@ -240,6 +240,14 @@
           '<button type="submit" class="btn btn-primary btn-block">Request Free Callback →</button>' +
           '<p class="form-note">We never share your details with anyone. NDA available on request.</p>' +
         '</form>' +
+        '<div class="modal-quick">' +
+          '<p class="mq-title">Prefer to reach us directly?</p>' +
+          '<div class="mq-btns">' +
+            '<a href="https://wa.me/' + WHATSAPP + '" target="_blank" rel="noopener" class="mq-btn mq-wa">' + ICON.wa + 'WhatsApp Now</a>' +
+            '<a href="tel:' + PHONE_TEL + '" class="mq-btn mq-call">' + ICON.phone + 'Call Now</a>' +
+          '</div>' +
+          '<p class="mq-info"><a href="mailto:' + EMAIL + '">' + EMAIL + '</a><span> · </span><a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1640/12, Opp. 3rd Gate KUK, Kurukshetra</a></p>' +
+        '</div>' +
       '</div></div>'
     );
     document.body.appendChild(overlay);
