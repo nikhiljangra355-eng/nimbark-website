@@ -62,9 +62,9 @@
           '<rect x="0" y="0" width="380" height="100" fill="#ffffff"/>' +
           '<rect x="0" y="70" width="380" height="30" fill="#f5921e"/>' +
           '<image href="/assets/logo.png" x="8" y="5" width="62" height="62"/>' +
-          '<text x="78" y="43" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="40" fill="#2d6a30" textLength="290" lengthAdjust="spacing">NIMBARK</text>' +
-          '<text x="78" y="63" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="17" fill="#2d6a30" textLength="290" lengthAdjust="spacing">RESEARCH INSIGHTS</text>' +
-          '<text x="190" y="90" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="13.5" fill="#ffffff" textLength="348" lengthAdjust="spacing">SEARCHING &amp; RESEARCHING FOR KNOWLEDGE</text>' +
+          '<text x="78" y="47" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="52" fill="#2d6a30" textLength="290" lengthAdjust="spacing">NIMBARK</text>' +
+          '<text x="78" y="65" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="20" fill="#2d6a30" textLength="290" lengthAdjust="spacing">RESEARCH INSIGHTS</text>' +
+          '<text x="190" y="91" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="14" fill="#ffffff" textLength="348" lengthAdjust="spacing">SEARCHING &amp; RESEARCHING FOR KNOWLEDGE</text>' +
         '</g>' +
         '<rect x="2" y="2" width="376" height="96" rx="16" fill="none" stroke="#f5921e" stroke-width="4"/>' +
       '</svg>' +
@@ -104,9 +104,9 @@
           '<rect x="0" y="0" width="380" height="100" fill="#ffffff"/>' +
           '<rect x="0" y="70" width="380" height="30" fill="#f5921e"/>' +
           '<image href="/assets/logo.png" x="8" y="5" width="62" height="62"/>' +
-          '<text x="78" y="43" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="40" fill="#2d6a30" textLength="290" lengthAdjust="spacing">NIMBARK</text>' +
-          '<text x="78" y="63" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="17" fill="#2d6a30" textLength="290" lengthAdjust="spacing">RESEARCH INSIGHTS</text>' +
-          '<text x="190" y="90" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="13.5" fill="#ffffff" textLength="348" lengthAdjust="spacing">SEARCHING &amp; RESEARCHING FOR KNOWLEDGE</text>' +
+          '<text x="78" y="47" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="52" fill="#2d6a30" textLength="290" lengthAdjust="spacing">NIMBARK</text>' +
+          '<text x="78" y="65" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="20" fill="#2d6a30" textLength="290" lengthAdjust="spacing">RESEARCH INSIGHTS</text>' +
+          '<text x="190" y="91" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="14" fill="#ffffff" textLength="348" lengthAdjust="spacing">SEARCHING &amp; RESEARCHING FOR KNOWLEDGE</text>' +
         '</g>' +
         '<rect x="2" y="2" width="376" height="96" rx="16" fill="none" stroke="#f5921e" stroke-width="4"/>' +
       '</svg>' +
