@@ -1569,14 +1569,12 @@ details.faq-item .faq-body {
 
 /* ---------- Brand as a single uploaded image ---------- */
 .brand-img { display: inline-flex; }
-.brand-img img,
 .brand-img .brand-svg {
   height: 80px;
   width: auto;
   display: block;
 }
 @media (max-width: 520px) {
-  .brand-img img,
   .brand-img .brand-svg { height: 56px; }
 }
 
@@ -1899,17 +1897,13 @@ details.faq-item .faq-body {
   text-align: center;
 }
 .end-logo {
-  width: 86px; height: 86px;
-  border-radius: 50%;
-  margin: 0 auto 12px;
+  display: block;
+  width: 100%;
+  max-width: 276px;
+  height: auto;
+  border-radius: 12px;
+  margin: 0 auto 16px;
   box-shadow: 0 8px 20px rgba(30, 70, 32, 0.18);
-  opacity: 0;
-}
-.end-name {
-  font-family: var(--font-display);
-  color: var(--green-900);
-  font-size: 19px;
-  margin-bottom: 14px;
   opacity: 0;
 }
 .end-quote {
@@ -1943,15 +1937,14 @@ details.faq-item .faq-body {
   opacity: 0;
 }
 .run .end-logo { animation: msgPop 0.6s ease 0.3s forwards; }
-.run .end-name { animation: msgPop 0.6s ease 0.9s forwards; }
-.run .end-quote { animation: msgPop 0.6s ease 1.6s forwards; }
-.run .end-cta { animation: ctaPop 0.55s ease 2.5s forwards; }
-.run .end-disc { animation: msgPop 0.6s ease 3.3s forwards; }
+.run .end-quote { animation: msgPop 0.6s ease 1.2s forwards; }
+.run .end-cta { animation: ctaPop 0.55s ease 2.1s forwards; }
+.run .end-disc { animation: msgPop 0.6s ease 2.9s forwards; }
 @keyframes ctaPop {
   0% { opacity: 0; transform: scale(0.6); }
   70% { opacity: 1; transform: scale(1.08); }
   100% { opacity: 1; transform: scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .run .end-logo, .run .end-name, .run .end-quote, .run .end-cta, .run .end-disc { animation: none; opacity: 1; }
+  .run .end-logo, .run .end-quote, .run .end-cta, .run .end-disc { animation: none; opacity: 1; }
 }
