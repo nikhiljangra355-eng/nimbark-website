@@ -1565,3 +1565,16 @@ details.faq-item .faq-body {
   .hero-illus, .page-hero.with-art .hero-copy .breadcrumb,
   .page-hero.with-art .hero-copy h1, .page-hero.with-art .hero-copy p { animation: none; }
 }
+
+
+/* ---------- Brand as a single uploaded image ---------- */
+.brand-img { display: inline-flex; }
+.brand-img img {
+  height: 78px;
+  width: auto;
+  border-radius: 12px;
+  display: block;
+}
+@media (max-width: 520px) {
+  .brand-img img { height: 54px; }
+}
