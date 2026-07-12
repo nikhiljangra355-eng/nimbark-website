@@ -50,6 +50,7 @@
       '<div class="topbar"><div class="container topbar-inner">' +
         '<div class="topbar-left">' +
           '<a href="tel:' + PHONE_TEL + '" class="topbar-item">' + ICON.phone + PHONE_DISPLAY + '</a>' +
+          '<a href="tel:+919996667152" class="topbar-item">' + ICON.phone + '99966-67152</a>' +
           '<a href="mailto:' + EMAIL + '" class="topbar-item">' + ICON.mail + EMAIL + '</a>' +
         '</div>' +
         '<div class="topbar-right"><a href="' + MAPS_URL + '" target="_blank" rel="noopener" class="topbar-item">' + ICON.pin + 'Opp. 3rd Gate KUK, Kurukshetra</a></div>' +
