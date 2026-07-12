@@ -78,6 +78,19 @@ svg { fill: currentColor; }
 
 .btn-whatsapp { background: #25d366; color: #fff; }
 .btn-whatsapp:hover { background: #1fb857; }
+/* Official-style WhatsApp mark: green glyph inside a solid white circle,
+   large enough to stay crisp at button size */
+.btn-whatsapp .wa-ic {
+  width: 30px; height: 30px;
+  background: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: -6px;
+}
+.btn-whatsapp .wa-ic svg { width: 19px; height: 19px; fill: #1fb857; }
 
 .btn-block { width: 100%; justify-content: center; }
 .btn[disabled] { opacity: 0.65; cursor: not-allowed; transform: none !important; }
