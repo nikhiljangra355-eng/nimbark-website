@@ -1577,3 +1577,98 @@ details.faq-item .faq-body {
 @media (max-width: 520px) {
   .brand-img .brand-svg { height: 56px; }
 }
+
+/* ---------- Hero orbit animation ---------- */
+.orbit-wrap {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  margin-inline: auto;
+}
+.orbit-path {
+  position: absolute;
+  top: 50%; left: 50%;
+  border: 2px dashed rgba(232, 131, 12, 0.35);
+  border-radius: 50%;
+}
+.orbit-path-1 { width: 280px; height: 280px; margin: -140px; }
+.orbit-path-2 { width: 420px; height: 420px; margin: -210px; }
+
+.orbit-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 128px; height: 128px;
+  margin: -64px;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 34px rgba(30, 70, 32, 0.18);
+  z-index: 3;
+}
+.orbit-center img { width: 104px; height: 104px; border-radius: 50%; }
+.orbit-center::before, .orbit-center::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(245, 146, 30, 0.45);
+  animation: centerPulse 3s ease-out infinite;
+}
+.orbit-center::after { animation-delay: 1.5s; }
+@keyframes centerPulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.65); opacity: 0; }
+}
+
+.orbit-spin {
+  position: absolute;
+  inset: 0;
+  animation: orbitSpin 26s linear infinite;
+}
+.orbit-spin-2 { animation: orbitSpinRev 40s linear infinite; }
+@keyframes orbitSpin { to { transform: rotate(360deg); } }
+@keyframes orbitSpinRev { to { transform: rotate(-360deg); } }
+.orbit-wrap:hover .orbit-spin,
+.orbit-wrap:hover .orbit-icon { animation-play-state: paused; }
+
+.orbit-item {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 58px; height: 58px;
+  margin: -29px;
+  transform: rotate(var(--a)) translateX(140px) rotate(calc(-1 * var(--a)));
+}
+.orbit-spin-2 .orbit-item { transform: rotate(var(--a)) translateX(210px) rotate(calc(-1 * var(--a))); }
+
+.orbit-icon {
+  width: 58px; height: 58px;
+  background: #fff;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  color: var(--orange-600);
+  box-shadow: 0 8px 22px rgba(30, 70, 32, 0.16);
+  animation: orbitSpinRev 26s linear infinite;
+}
+.orbit-spin-2 .orbit-icon { animation: orbitSpin 40s linear infinite; color: var(--green-700); }
+.orbit-icon svg { width: 28px; height: 28px; }
+
+.orbit-star {
+  position: absolute;
+  color: var(--yellow-400);
+  font-size: 1.1rem;
+  animation: twinkle 2.6s ease-in-out infinite;
+}
+.orbit-star:nth-child(odd) { animation-delay: 1.3s; color: var(--orange-500); }
+@keyframes twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+@media (max-width: 1150px) {
+  .orbit-wrap { transform: scale(0.82); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit-spin, .orbit-icon, .orbit-star, .orbit-center::before, .orbit-center::after { animation: none; }
+}
