@@ -198,28 +198,42 @@
   }
 
   // ---------- Consultation modal ----------
+  var EXTRA_OPTIONS = [
+    'Specific Chapter Help',
+    'Literature Review',
+    'Research Methodology',
+    'Implementation Code (Python / MATLAB)',
+    'Conference Paper'
+  ];
+
   function buildModal() {
     var options = SERVICES.map(function (s) {
       return '<option value="' + s.name + '">' + s.name + '</option>';
+    }).join('');
+    var extraOptions = EXTRA_OPTIONS.map(function (name) {
+      return '<option value="' + name + '">' + name + '</option>';
     }).join('');
 
     var overlay = el(
       '<div class="modal-overlay" id="consultModal" role="dialog" aria-modal="true" aria-labelledby="consultTitle">' +
       '<div class="modal">' +
         '<button type="button" class="modal-close" aria-label="Close">✕</button>' +
-        '<h2 id="consultTitle">Get a Free Consultation</h2>' +
-        '<p>Share your details and our research advisor will call you back within 24 hours. 100% confidential.</p>' +
+        '<h2 id="consultTitle">Get Free Expert Consultation</h2>' +
+        '<p>Fill your details — our research expert will call you back. 100% confidential.</p>' +
         '<form class="enquiry-form" data-enquiry-form>' +
           '<div class="form-feedback" role="alert"></div>' +
           '<div class="hp-field" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>' +
-          '<div class="form-group"><label>Full Name *<input type="text" name="name" placeholder="Your name" required /></label></div>' +
+          '<div class="form-group"><label>Your Name *<input type="text" name="name" placeholder="Dr. Sharma" required /></label></div>' +
           '<div class="form-row">' +
-            '<div class="form-group"><label>Phone Number *<input type="tel" name="phone" placeholder="10-digit mobile number" required /></label></div>' +
-            '<div class="form-group"><label>Email *<input type="email" name="email" placeholder="you@example.com" required /></label></div>' +
+            '<div class="form-group"><label>Phone *<input type="tel" name="phone" placeholder="+91 98765 43210" required /></label></div>' +
+            '<div class="form-group"><label>Email *<input type="email" name="email" placeholder="you@uni.ac.in" required /></label></div>' +
           '</div>' +
-          '<div class="form-group"><label>Service Required<select name="service"><option value="">— Select a service —</option>' + options + '<option value="Other">Other</option></select></label></div>' +
-          '<div class="form-group"><label>Your Message<textarea name="message" rows="3" placeholder="Tell us briefly about your requirement…"></textarea></label></div>' +
-          '<button type="submit" class="btn btn-primary btn-block">Request Callback</button>' +
+          '<div class="form-group"><label>Service Required *<select name="service" required><option value="">— Select Your Requirement —</option>' +
+            '<optgroup label="Our Services">' + options + '</optgroup>' +
+            '<optgroup label="Specific Requirements">' + extraOptions + '</optgroup>' +
+            '<option value="Other">Other</option></select></label></div>' +
+          '<div class="form-group"><label>Research Area / Brief Requirement<textarea name="message" rows="3" placeholder="E.g. Management — consumer behaviour thesis help…"></textarea></label></div>' +
+          '<button type="submit" class="btn btn-primary btn-block">Request Free Callback →</button>' +
           '<p class="form-note">We never share your details with anyone. NDA available on request.</p>' +
         '</form>' +
       '</div></div>'
