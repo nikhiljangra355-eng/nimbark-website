@@ -1618,15 +1618,20 @@ details.faq-item .faq-body {
   background: linear-gradient(135deg, var(--orange-600), var(--yellow-400));
 }
 
-/* ---------- Review cards grid (testimonials v2) ---------- */
-.reviews-grid {
+/* ---------- Review cards auto-slider (testimonials v2) ---------- */
+.reviews-viewport {
+  overflow: hidden;
+  padding: 10px 6px 20px;
+  margin: -10px -6px 0;
+}
+.reviews-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 1.4rem;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 .review-card {
-  width: min(352px, 100%);
+  flex: 0 0 calc((100% - 2.8rem) / 3);
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -1641,12 +1646,26 @@ details.faq-item .faq-body {
   box-shadow: 0 18px 40px rgba(30, 70, 32, 0.14);
   border-color: rgba(245, 146, 30, 0.45);
 }
-/* Staggered entrance as cards scroll into view */
-.reviews-grid .review-card:nth-child(2) { transition-delay: 0.1s; }
-.reviews-grid .review-card:nth-child(3) { transition-delay: 0.2s; }
-.reviews-grid .review-card:nth-child(4) { transition-delay: 0.1s; }
-.reviews-grid .review-card:nth-child(5) { transition-delay: 0.2s; }
-.review-card:hover { transition-delay: 0s; }
+@media (max-width: 900px) {
+  .review-card { flex-basis: calc((100% - 1.4rem) / 2); }
+}
+@media (max-width: 560px) {
+  .review-card { flex-basis: 100%; }
+}
+.rev-dots { display: flex; justify-content: center; gap: 8px; margin-top: 1.3rem; }
+.rev-dots button {
+  width: 9px; height: 9px;
+  border-radius: 999px;
+  border: 0;
+  padding: 0;
+  background: #d9d2c2;
+  cursor: pointer;
+  transition: background 0.25s ease, width 0.25s ease;
+}
+.rev-dots button.on { background: var(--orange-500); width: 24px; }
+@media (prefers-reduced-motion: reduce) {
+  .reviews-track { transition: none; }
+}
 .review-quote {
   font-style: italic;
   color: var(--ink-soft, #3c4a3e);

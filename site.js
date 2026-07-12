@@ -423,6 +423,64 @@
   }
 
   // ---------- Testimonials carousel ----------
+  // ---------- Testimonials auto-slider ----------
+  function initReviews() {
+    var viewport = document.querySelector('.reviews-viewport');
+    if (!viewport) return;
+    var track = viewport.querySelector('.reviews-track');
+    var cards = track.children;
+    var dotsWrap = document.querySelector('.rev-dots');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var index = 0;
+    var timer = null;
+
+    function visibleCount() {
+      var w = window.innerWidth;
+      return w <= 560 ? 1 : w <= 900 ? 2 : 3;
+    }
+    function maxIndex() {
+      return Math.max(0, cards.length - visibleCount());
+    }
+    function update() {
+      if (index > maxIndex()) index = 0;
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      var step = cards[0].getBoundingClientRect().width + gap;
+      track.style.transform = 'translateX(' + (-index * step) + 'px)';
+      if (dotsWrap) {
+        Array.prototype.forEach.call(dotsWrap.children, function (d, k) {
+          d.classList.toggle('on', k === index);
+        });
+      }
+    }
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = '';
+      for (var i = 0; i <= maxIndex(); i++) {
+        (function (i) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', 'Show reviews page ' + (i + 1));
+          b.addEventListener('click', function () { index = i; update(); restart(); });
+          dotsWrap.appendChild(b);
+        })(i);
+      }
+    }
+    function next() {
+      index = index >= maxIndex() ? 0 : index + 1;
+      update();
+    }
+    function restart() {
+      clearInterval(timer);
+      if (!reduceMotion) timer = setInterval(next, 4000);
+    }
+    viewport.addEventListener('mouseenter', function () { clearInterval(timer); });
+    viewport.addEventListener('mouseleave', restart);
+    window.addEventListener('resize', function () { buildDots(); update(); });
+    buildDots();
+    update();
+    restart();
+  }
+
   function initCarousel() {
     var carousel = document.querySelector('.carousel');
     if (!carousel) return;
@@ -561,6 +619,7 @@
     initForms();
     initCounters();
     initCarousel();
+    initReviews();
     initRotator();
     initStory();
     initReveal();
