@@ -436,7 +436,7 @@
 
     function visibleCount() {
       var w = window.innerWidth;
-      return w <= 560 ? 1 : w <= 900 ? 2 : 3;
+      return w <= 560 ? 1 : w <= 800 ? 2 : w <= 1100 ? 3 : 5;
     }
     function maxIndex() {
       return Math.max(0, cards.length - visibleCount());
@@ -471,7 +471,7 @@
     }
     function restart() {
       clearInterval(timer);
-      if (!reduceMotion) timer = setInterval(next, 4000);
+      if (!reduceMotion) timer = setInterval(next, 2500);
     }
     viewport.addEventListener('mouseenter', function () { clearInterval(timer); });
     viewport.addEventListener('mouseleave', restart);
