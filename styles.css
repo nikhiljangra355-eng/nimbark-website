@@ -1674,7 +1674,7 @@ details.faq-item .faq-body {
 }
 
 /* ---------- Hero story animation (3 scenes) ---------- */
-.story { position: relative; width: 360px; height: 540px; margin-inline: auto; }
+.story { position: relative; width: 360px; height: 648px; margin-inline: auto; }
 .story-scene {
   position: absolute;
   inset: 0 0 28px 0;
@@ -1722,16 +1722,19 @@ details.faq-item .faq-body {
 .ph-head small { font-size: 10.5px; color: #9ad3a0; }
 .ph-chat {
   padding: 12px 9px;
-  height: 415px;
+  height: 528px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 .msg {
-  max-width: 82%;
-  padding: 7px 11px;
+  max-width: 84%;
+  padding: 6px 10px;
   border-radius: 11px;
-  font-size: 12.3px;
+  font-size: 11.8px;
   line-height: 1.4;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
   opacity: 0;
@@ -1741,11 +1744,14 @@ details.faq-item .faq-body {
 .msg.out { background: #dcf8c6; align-self: flex-end; border-top-right-radius: 3px; }
 .msg .tk { color: #34b7f1; font-size: 10px; float: right; margin: 6px 0 0 7px; }
 .run .msg { animation: msgPop 0.45s ease forwards; }
-.run .m1 { animation-delay: 0.6s; } .run .m2 { animation-delay: 2.6s; }
-.run .m3 { animation-delay: 4.8s; } .run .m4 { animation-delay: 7s; }
-.run .m5 { animation-delay: 9.6s; } .run .m6 { animation-delay: 11.6s; }
-.run .m7 { animation-delay: 14.2s; }
+.run .m1 { animation-delay: 0.6s; } .run .m2 { animation-delay: 2.7s; }
+.run .m3 { animation-delay: 4.9s; } .run .m4 { animation-delay: 7.1s; }
+.run .m5 { animation-delay: 9.5s; } .run .m6 { animation-delay: 11.7s; }
+.run .m7 { animation-delay: 14.3s; } .run .m8 { animation-delay: 16.3s; }
+.run .m9 { animation-delay: 18.8s; }
 @keyframes msgPop { to { opacity: 1; transform: translateY(0) scale(1); } }
+
+.ph-chat::-webkit-scrollbar { display: none; }
 
 /* --- Scene 2: thesis document --- */
 .doc {

@@ -470,8 +470,9 @@
     if (!story) return;
     var scenes = [].slice.call(story.querySelectorAll('.story-scene'));
     var dots = [].slice.call(story.querySelectorAll('.story-dots span'));
-    var durations = [17000, 12500, 9500];
+    var durations = [21500, 12500, 9500];
     var i = 0;
+    var chatScroll = null;
     function show(n) {
       scenes.forEach(function (s, k) {
         s.classList.toggle('active', k === n);
@@ -482,6 +483,15 @@
         }
       });
       dots.forEach(function (d, k) { d.classList.toggle('on', k === n); });
+      // Auto-scroll the chat like a real conversation while scene 1 plays
+      clearInterval(chatScroll);
+      var chat = story.querySelector('.ph-chat');
+      if (n === 0 && chat) {
+        chat.scrollTop = 0;
+        chatScroll = setInterval(function () {
+          chat.scrollTop = chat.scrollHeight;
+        }, 400);
+      }
     }
     show(0);
     setTimeout(function next() {
