@@ -1141,13 +1141,17 @@ details.faq-item .faq-body {
 }
 
 /* ---------- Chapter-by-chapter cards (PhD thesis page) ---------- */
+.chap-section { background: var(--cream); }
 .chap-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.1rem;
-  margin: 1.3rem 0 1.6rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+  margin: 0 0 1.6rem;
 }
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  .chap-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
   .chap-grid { grid-template-columns: 1fr; }
 }
 .chap-card {
