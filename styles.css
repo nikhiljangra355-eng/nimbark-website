@@ -128,6 +128,23 @@ svg { fill: currentColor; }
 }
 a.topbar-item:hover { color: var(--yellow-400); }
 
+/* Social icons in the topbar (replaces the address) */
+.topbar-social { display: flex; gap: 0.5rem; align-items: center; }
+.soc {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.soc svg { width: 14px; height: 14px; fill: currentColor; }
+.soc:hover { transform: translateY(-1px); filter: brightness(1.12); }
+.soc-fb { background: #1877f2; }
+.soc-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.soc-yt { background: #ff0000; }
+
 /* ---------- Header ---------- */
 .header {
   position: sticky;
