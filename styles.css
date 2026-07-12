@@ -1064,6 +1064,7 @@ details.faq-item .faq-body {
   color: var(--yellow-400);
   font-weight: 700;
   font-size: 1.15rem;
+  margin-right: 1.8rem;
 }
 .consult-call:hover { color: #ffffff; }
 .consult-form h3 {
