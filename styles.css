@@ -783,7 +783,13 @@ a.topbar-item:hover { color: var(--yellow-400); }
   font-size: 1.12rem;
   margin: 1.6rem 0 0.5rem;
 }
-.prose p { color: var(--muted); margin-bottom: 1rem; }
+.prose p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
 .prose strong { color: var(--ink); }
 .prose ul, .prose ol { margin: 0 0 1.2rem 1.3rem; color: var(--muted); }
 .prose li { margin-bottom: 0.45rem; }
