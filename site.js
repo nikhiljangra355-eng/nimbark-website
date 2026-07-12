@@ -472,7 +472,6 @@
     var dots = [].slice.call(story.querySelectorAll('.story-dots span'));
     var durations = [21500, 12500, 9500];
     var i = 0;
-    var chatScroll = null;
     function show(n) {
       scenes.forEach(function (s, k) {
         s.classList.toggle('active', k === n);
@@ -483,15 +482,6 @@
         }
       });
       dots.forEach(function (d, k) { d.classList.toggle('on', k === n); });
-      // Keep the chat pinned to the newest message, like a real conversation
-      clearInterval(chatScroll);
-      var chat = story.querySelector('.ph-chat');
-      if (n === 0 && chat) {
-        chat.scrollTop = 0;
-        chatScroll = setInterval(function () {
-          chat.scrollTop = chat.scrollHeight;
-        }, 80);
-      }
     }
     show(0);
     setTimeout(function next() {

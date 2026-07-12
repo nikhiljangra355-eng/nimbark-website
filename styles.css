@@ -1674,7 +1674,7 @@ details.faq-item .faq-body {
 }
 
 /* ---------- Hero story animation (3 scenes) ---------- */
-.story { position: relative; width: 360px; height: 648px; margin-inline: auto; }
+.story { position: relative; width: 360px; height: 596px; margin-inline: auto; }
 .story-scene {
   position: absolute;
   inset: 0 0 28px 0;
@@ -1722,12 +1722,11 @@ details.faq-item .faq-body {
 .ph-head small { font-size: 10.5px; color: #9ad3a0; }
 .ph-chat {
   padding: 12px 9px;
-  height: 528px;
+  height: 486px;
   display: flex;
   flex-direction: column;
   gap: 7px;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 .msg {
   max-width: 84%;
