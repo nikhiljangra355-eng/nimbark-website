@@ -955,6 +955,9 @@ details.faq-item .faq-body {
   color: var(--green-700);
   border-radius: 12px;
 }
+.wa-inline { display: inline-flex; vertical-align: -2px; color: #1fb857; }
+.wa-inline svg { width: 15px; height: 15px; fill: currentColor; }
+.wa-inline:hover { color: #178a44; }
 .contact-item h3 { font-size: 0.95rem; color: var(--green-900); margin-bottom: 0.15rem; }
 .contact-item p, .contact-item a { font-size: 0.92rem; color: var(--muted); }
 .contact-item a:hover { color: var(--orange-600); }
@@ -1117,8 +1120,9 @@ details.faq-item .faq-body {
   margin-right: 1.8rem;
 }
 .consult-call:hover { color: #ffffff; }
-.consult-wa { color: #4fe083; }
+.consult-wa { color: #4fe083; margin-right: 0.5rem; }
 .consult-wa:hover { color: #7bf0a6; }
+.consult-num2 { margin-left: 0; }
 .consult-form h3 {
   font-family: var(--font-display);
   color: var(--green-900);
@@ -1132,6 +1136,10 @@ details.faq-item .faq-body {
 
 /* ---------- Footer ---------- */
 .footer { background: var(--green-900); color: #c8d6c8; }
+.foot-num { display: flex; align-items: center; gap: 0.45rem; }
+.foot-num .foot-wa { color: #4fe083; display: inline-flex; }
+.foot-num .foot-wa:hover { color: #7bf0a6; }
+.foot-num svg { width: 15px; height: 15px; fill: currentColor; }
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 0.8fr 1.1fr 1fr;
