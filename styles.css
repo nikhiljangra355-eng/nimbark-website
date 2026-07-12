@@ -173,6 +173,8 @@ svg { fill: currentColor; }
   color: #dbe8db;
 }
 a.topbar-item:hover { color: var(--yellow-400); }
+.topbar-waicon { margin-left: -0.7rem; color: #4fe083; }
+.topbar-waicon:hover { color: #7bf0a6; }
 
 /* Social icons in the topbar (replaces the address) */
 .topbar-social { display: flex; gap: 0.5rem; align-items: center; }
@@ -1113,6 +1115,8 @@ details.faq-item .faq-body {
   margin-right: 1.8rem;
 }
 .consult-call:hover { color: #ffffff; }
+.consult-wa { color: #4fe083; }
+.consult-wa:hover { color: #7bf0a6; }
 .consult-form h3 {
   font-family: var(--font-display);
   color: var(--green-900);

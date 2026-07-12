@@ -142,7 +142,7 @@ function autoReplyHtml(d) {
       <p>Thank you for contacting <strong>Nimbark Research Insights</strong>. We have received your enquiry${d.service ? ` regarding <strong>${escapeHtml(d.service)}</strong>` : ''} and one of our research advisors will get back to you <strong>within 24 hours</strong>.</p>
       <p>If your requirement is urgent, you can reach us right away:</p>
       <p style="margin:16px 0;">
-        📞 <strong>Call:</strong> <a href="tel:+919588142496" style="color:#2d6a30;">95881-42496</a><br/>
+        📞 <strong>Call:</strong> <a href="tel:+919588142496" style="color:#2d6a30;">95881-42496</a> · <a href="tel:+919996667152" style="color:#2d6a30;">99966-67152</a><br/>
         💬 <strong>WhatsApp:</strong> <a href="https://wa.me/919996667152" style="color:#2d6a30;">99966-67152</a><br/>
         📍 <strong>Office:</strong> #1640/12, Ground Floor, Opp. 3rd Gate KUK, Kurukshetra, Haryana
       </p>
