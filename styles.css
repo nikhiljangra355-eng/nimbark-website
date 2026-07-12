@@ -388,24 +388,49 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .breadcrumb a { color: var(--yellow-400); }
 
 /* ---------- Trust strip ---------- */
-.trust-strip { background: var(--green-900); padding: 1.4rem 0; }
+.trust-strip { background: var(--green-900); padding: 1.9rem 0; }
 .trust-inner {
-  display: flex;
-  justify-content: center;
-  column-gap: 2.2rem;
-  row-gap: 0.9rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 1.4rem;
+  max-width: 1060px;
 }
 .trust-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: #e6efe6;
-  font-size: 0.86rem;
-  font-weight: 500;
-  white-space: nowrap;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
 }
-.trust-item svg { color: var(--yellow-400); }
+.trust-icon {
+  flex-shrink: 0;
+  width: 42px; height: 42px;
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trust-icon svg { color: var(--yellow-400); width: 20px; height: 20px; }
+.trust-text b {
+  display: block;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.trust-text small {
+  display: block;
+  color: #b9cbb9;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+@media (max-width: 900px) {
+  .trust-inner { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .trust-inner { grid-template-columns: 1fr; }
+}
 
 /* ---------- Stats counters ---------- */
 .stats-band { background: #fff; padding: 3.4rem 0; }
