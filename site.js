@@ -62,6 +62,15 @@
           '<a href="' + SOCIAL.facebook + '" target="_blank" rel="noopener" class="soc soc-fb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.1h2.9l.5-3.7h-3.4V7.9c0-1 .3-1.8 1.9-1.8h1.6V2.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.6v2.9H7v3.7h3V22z"/></svg></a>' +
           '<a href="' + SOCIAL.instagram + '" target="_blank" rel="noopener" class="soc soc-ig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 5a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 1.8a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5-3.1a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/></svg></a>' +
           '<a href="' + SOCIAL.youtube + '" target="_blank" rel="noopener" class="soc soc-yt" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>' +
+          '<a href="' + MAPS_URL + '" target="_blank" rel="noopener" class="soc soc-map" aria-label="Find us on Google Maps">' +
+            '<svg viewBox="0 0 24 24"><defs><clipPath id="mpin"><path d="M12 1.8a7.2 7.2 0 0 0-7.2 7.2c0 5.4 7.2 13.2 7.2 13.2s7.2-7.8 7.2-13.2A7.2 7.2 0 0 0 12 1.8z"/></clipPath></defs>' +
+            '<g clip-path="url(#mpin)">' +
+              '<rect x="0" y="0" width="12" height="9" fill="#4285f4"/>' +
+              '<rect x="12" y="0" width="12" height="9" fill="#34a853"/>' +
+              '<rect x="0" y="9" width="12" height="15" fill="#fbbc04"/>' +
+              '<rect x="12" y="9" width="12" height="15" fill="#ea4335"/>' +
+              '<circle cx="12" cy="9" r="2.7" fill="#ffffff"/>' +
+            '</g></svg></a>' +
         '</div>' +
       '</div></div>' +
       '<header class="header"><div class="container header-inner">' +
