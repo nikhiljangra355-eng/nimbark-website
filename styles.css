@@ -1810,13 +1810,13 @@ details.faq-item .faq-body {
 @keyframes stampIn { to { opacity: 1; transform: rotate(-11deg) scale(1); } }
 
 /* --- Scene 3: success --- */
-.win { width: 340px; position: relative; padding: 46px 0 0; }
+.win { width: 358px; position: relative; padding: 56px 0 0; }
 .win-track {
   position: absolute;
-  top: 50%; left: 7%; right: 7%;
-  height: 6px;
+  top: 50%; left: 8%; right: 8%;
+  height: 9px;
   background: #e4e9e4;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .win-fill {
   height: 100%; width: 0; border-radius: 3px;
@@ -1825,18 +1825,19 @@ details.faq-item .faq-body {
 .run .win-fill { animation: winGrow 4.4s ease 0.3s forwards; }
 @keyframes winGrow { to { width: 100%; } }
 .win-steps { display: flex; justify-content: space-between; position: relative; }
-.wst { text-align: center; width: 76px; position: relative; }
+.wst { text-align: center; width: 86px; position: relative; }
 .wdot {
-  width: 54px; height: 54px;
-  margin: 0 auto 7px;
+  width: 76px; height: 76px;
+  margin: 0 auto 10px;
   border-radius: 50%;
   background: #fff;
-  border: 3px solid #e4e9e4;
+  border: 4px solid #e4e9e4;
   display: grid;
   place-items: center;
-  font-size: 22px;
+  font-size: 32px;
+  box-shadow: 0 6px 16px rgba(30, 70, 32, 0.1);
 }
-.wst b { font-size: 10.5px; color: var(--muted); }
+.wst b { font-size: 13px; color: var(--green-900); }
 .run .wdot { animation: dotLite 0.45s ease forwards; animation-play-state: paused; }
 .run .w1 .wdot { animation-delay: 0.5s; animation-play-state: running; }
 .run .w2 .wdot { animation-delay: 1.7s; animation-play-state: running; }
@@ -1847,9 +1848,9 @@ details.faq-item .faq-body {
 }
 .wcap {
   position: absolute;
-  top: -44px; left: 50%;
-  margin-left: -17px;
-  font-size: 34px;
+  top: -58px; left: 50%;
+  margin-left: -23px;
+  font-size: 46px;
   opacity: 0;
 }
 .run .wcap { animation: capFly 1s ease 4.9s forwards; }
@@ -1867,7 +1868,7 @@ details.faq-item .faq-body {
   opacity: 0;
 }
 .run .win-msg { animation: msgPop 0.6s ease 5.6s forwards; }
-.wconf { position: absolute; font-size: 15px; opacity: 0; }
+.wconf { position: absolute; font-size: 20px; opacity: 0; }
 .run .wconf { animation: confFall 1.5s ease forwards; }
 .run .c1 { right: 6%; top: -6%; animation-delay: 5.2s; }
 .run .c2 { right: 18%; top: -14%; animation-delay: 5.45s; }
