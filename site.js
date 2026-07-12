@@ -483,14 +483,14 @@
         }
       });
       dots.forEach(function (d, k) { d.classList.toggle('on', k === n); });
-      // Auto-scroll the chat like a real conversation while scene 1 plays
+      // Keep the chat pinned to the newest message, like a real conversation
       clearInterval(chatScroll);
       var chat = story.querySelector('.ph-chat');
       if (n === 0 && chat) {
         chat.scrollTop = 0;
         chatScroll = setInterval(function () {
           chat.scrollTop = chat.scrollHeight;
-        }, 400);
+        }, 80);
       }
     }
     show(0);
