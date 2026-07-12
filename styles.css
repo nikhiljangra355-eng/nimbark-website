@@ -144,8 +144,16 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .soc-fb { background: #1877f2; }
 .soc-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 .soc-yt { background: #ff0000; }
-.soc-map { background: #ffffff; }
-.soc-map svg { width: 15px; height: 15px; }
+.soc-map {
+  background: #ffffff;
+  width: auto;
+  padding: 0 9px 0 7px;
+  gap: 0.3rem;
+  color: #3c4043;
+  font-weight: 600;
+  font-size: 0.74rem;
+}
+.soc-map svg { width: 14px; height: 14px; }
 
 /* ---------- Header ---------- */
 .header {

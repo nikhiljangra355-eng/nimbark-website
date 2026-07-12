@@ -11,8 +11,10 @@
   var PHONE_DISPLAY = '95881-42496';
   var PHONE_TEL = '+919588142496';
   var EMAIL = 'info@nimbarkinsights.com';
+  // Query resolves to the Gate No. 3 landmark of Kurukshetra University —
+  // the office is directly opposite it, so navigation lands at the right spot.
   var MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent('#1640/12, Ground Floor, Opp. 3rd Gate KUK, Kurukshetra, Haryana');
+    encodeURIComponent('Gate No. 3, Kurukshetra University, Kurukshetra, Haryana 136119');
   var SOCIAL = {
     facebook: 'https://www.facebook.com/nimbarkinsights',
     instagram: 'https://www.instagram.com/nimbarkinsights',
@@ -70,7 +72,7 @@
               '<rect x="0" y="9" width="12" height="15" fill="#fbbc04"/>' +
               '<rect x="12" y="9" width="12" height="15" fill="#ea4335"/>' +
               '<circle cx="12" cy="9" r="2.7" fill="#ffffff"/>' +
-            '</g></svg></a>' +
+            '</g></svg><span>Maps</span></a>' +
         '</div>' +
       '</div></div>' +
       '<header class="header"><div class="container header-inner">' +
