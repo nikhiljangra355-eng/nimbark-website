@@ -76,6 +76,28 @@ svg { fill: currentColor; }
 
 .btn-light { background: #fff; color: var(--orange-600); }
 
+/* FAQ "read all" button — clearly clickable: solid colour, lift + glow, nudging arrow */
+.btn-faq-all {
+  box-shadow: 0 8px 22px rgba(245, 146, 30, 0.35);
+  padding: 0.9rem 2.2rem;
+}
+.btn-faq-all:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(245, 146, 30, 0.45);
+}
+.btn-faq-all .btn-arrow {
+  display: inline-block;
+  animation: arrowNudge 1.2s ease-in-out infinite;
+}
+.btn-faq-all:hover .btn-arrow { animation: none; transform: translateX(4px); }
+@keyframes arrowNudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn-faq-all .btn-arrow { animation: none; }
+}
+
 .btn-whatsapp { background: #25d366; color: #fff; }
 .btn-whatsapp:hover { background: #1fb857; }
 /* Official-style WhatsApp mark: green glyph inside a solid white circle,
