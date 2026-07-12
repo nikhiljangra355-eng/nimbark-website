@@ -1569,12 +1569,11 @@ details.faq-item .faq-body {
 
 /* ---------- Brand as a single uploaded image ---------- */
 .brand-img { display: inline-flex; }
-.brand-img img {
-  height: 78px;
+.brand-img .brand-svg {
+  height: 80px;
   width: auto;
-  border-radius: 12px;
   display: block;
 }
 @media (max-width: 520px) {
-  .brand-img img { height: 54px; }
+  .brand-img .brand-svg { height: 56px; }
 }
