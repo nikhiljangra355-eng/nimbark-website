@@ -2260,11 +2260,11 @@ details.faq-item .faq-body {
 .msg.out { background: #dcf8c6; align-self: flex-end; border-top-right-radius: 3px; }
 .msg .tk { color: #34b7f1; font-size: 10px; float: right; margin: 6px 0 0 7px; }
 .run .msg { animation: msgPop 0.45s ease forwards; }
-.run .m1 { animation-delay: 0.5s; } .run .m2 { animation-delay: 1.9s; }
-.run .m3 { animation-delay: 3.5s; } .run .m4 { animation-delay: 5s; }
-.run .m5 { animation-delay: 6.7s; } .run .m6 { animation-delay: 8.2s; }
-.run .m7 { animation-delay: 10s; } .run .m8 { animation-delay: 11.4s; }
-.run .m9 { animation-delay: 13.2s; }
+.run .m1 { animation-delay: 0.4s; } .run .m2 { animation-delay: 1.4s; }
+.run .m3 { animation-delay: 2.5s; } .run .m4 { animation-delay: 3.6s; }
+.run .m5 { animation-delay: 4.8s; } .run .m6 { animation-delay: 5.9s; }
+.run .m7 { animation-delay: 7.1s; } .run .m8 { animation-delay: 8.1s; }
+.run .m9 { animation-delay: 9.4s; }
 @keyframes msgPop { to { opacity: 1; transform: translateY(0) scale(1); } }
 
 .ph-chat::-webkit-scrollbar { display: none; }
