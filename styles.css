@@ -2260,11 +2260,11 @@ details.faq-item .faq-body {
 .msg.out { background: #dcf8c6; align-self: flex-end; border-top-right-radius: 3px; }
 .msg .tk { color: #34b7f1; font-size: 10px; float: right; margin: 6px 0 0 7px; }
 .run .msg { animation: msgPop 0.45s ease forwards; }
-.run .m1 { animation-delay: 0.4s; } .run .m2 { animation-delay: 1.4s; }
-.run .m3 { animation-delay: 2.5s; } .run .m4 { animation-delay: 3.6s; }
-.run .m5 { animation-delay: 4.8s; } .run .m6 { animation-delay: 5.9s; }
-.run .m7 { animation-delay: 7.1s; } .run .m8 { animation-delay: 8.1s; }
-.run .m9 { animation-delay: 9.4s; }
+.run .m1 { animation-delay: 0.3s; } .run .m2 { animation-delay: 1.2s; }
+.run .m3 { animation-delay: 2.1s; } .run .m4 { animation-delay: 3s; }
+.run .m5 { animation-delay: 3.9s; } .run .m6 { animation-delay: 4.8s; }
+.run .m7 { animation-delay: 5.8s; } .run .m8 { animation-delay: 6.6s; }
+.run .m9 { animation-delay: 7.5s; }
 @keyframes msgPop { to { opacity: 1; transform: translateY(0) scale(1); } }
 
 .ph-chat::-webkit-scrollbar { display: none; }
@@ -2304,12 +2304,12 @@ details.faq-item .faq-body {
 }
 .run .fill { animation: barType 1.15s ease forwards; }
 .run .rc { animation: ckIn 0.3s ease forwards; }
-.run .r1 .fill { animation-delay: 0.4s; } .run .r1 .rc { animation-delay: 1.55s; }
-.run .r2 .fill { animation-delay: 1.9s; } .run .r2 .rc { animation-delay: 3.05s; }
-.run .r3 .fill { animation-delay: 3.4s; } .run .r3 .rc { animation-delay: 4.55s; }
-.run .r4 .fill { animation-delay: 4.9s; } .run .r4 .rc { animation-delay: 6.05s; }
-.run .r5 .fill { animation-delay: 6.4s; } .run .r5 .rc { animation-delay: 7.55s; }
-.run .r6 .fill { animation-delay: 7.9s; } .run .r6 .rc { animation-delay: 9.05s; }
+.run .r1 .fill { animation-delay: 0.4s; } .run .r1 .rc { animation-delay: 1.4s; }
+.run .r2 .fill { animation-delay: 1.6s; } .run .r2 .rc { animation-delay: 2.6s; }
+.run .r3 .fill { animation-delay: 2.8s; } .run .r3 .rc { animation-delay: 3.8s; }
+.run .r4 .fill { animation-delay: 4s; } .run .r4 .rc { animation-delay: 5s; }
+.run .r5 .fill { animation-delay: 5.2s; } .run .r5 .rc { animation-delay: 6.2s; }
+.run .r6 .fill { animation-delay: 6.4s; } .run .r6 .rc { animation-delay: 7.4s; }
 @keyframes barType { to { width: 100%; } }
 @keyframes ckIn { to { opacity: 1; } }
 .doc-stamp {
@@ -2324,7 +2324,7 @@ details.faq-item .faq-body {
   transform: rotate(-11deg) scale(3);
   opacity: 0;
 }
-.run .doc-stamp { animation: stampIn 0.5s ease 9.8s forwards; }
+.run .doc-stamp { animation: stampIn 0.5s ease 7.9s forwards; }
 @keyframes stampIn { to { opacity: 1; transform: rotate(-11deg) scale(1); } }
 
 /* --- Scene 3: success --- */
