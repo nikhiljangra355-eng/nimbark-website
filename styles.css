@@ -2249,9 +2249,9 @@ details.faq-item .faq-body {
   height: 596px;
   margin-inline: auto;
   /* Visually compact so the trust strip enters the first screen */
-  transform: scale(0.88);
+  transform: scale(0.93);
   transform-origin: top center;
-  margin-bottom: -70px;
+  margin-bottom: -40px;
 }
 .story-scene {
   position: absolute;
@@ -2466,18 +2466,18 @@ details.faq-item .faq-body {
 
 /* --- Scene 4: closing card --- */
 .endcard {
-  width: 354px;
+  width: 358px;
   background: #fff;
   border-radius: 18px;
   border-top: 6px solid var(--orange-500);
   box-shadow: 0 24px 55px rgba(30, 70, 32, 0.2);
-  padding: 28px 24px 22px;
+  padding: 26px 19px 20px;
   text-align: center;
 }
 .end-logo {
   display: block;
   width: 100%;
-  max-width: 306px;
+  max-width: 320px;
   height: auto;
   aspect-ratio: 380 / 100;
   border-radius: 12px;
@@ -2489,7 +2489,7 @@ details.faq-item .faq-body {
   font-family: var(--font-display);
   font-style: italic;
   color: var(--green-700);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.55;
   margin-bottom: 18px;
   opacity: 0;
@@ -2509,7 +2509,7 @@ details.faq-item .faq-body {
 .end-disc {
   border-top: 1px solid var(--line);
   padding-top: 12px;
-  font-size: 12.5px;
+  font-size: 13.8px;
   line-height: 1.6;
   color: var(--ink);
   text-align: left;
