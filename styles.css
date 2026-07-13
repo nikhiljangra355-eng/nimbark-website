@@ -791,24 +791,31 @@ a.topbar-item:hover { color: var(--yellow-400); }
   margin-bottom: 1rem;
 }
 
-/* All multi-line content paragraphs: justified for symmetric edges.
-   Aggressive hyphenation + word-breaking keeps gaps small even in
-   narrow cards. */
+/* WIDE columns: justified — both edges straight, symmetric. */
 .prose p,
 .faq-body p,
 .consult-copy > p,
 .service-card p,
-.step p,
 .post-card-body p,
 .footer-brand p,
 .side-card p,
-.review-quote,
 .end-disc {
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
   overflow-wrap: break-word;
 }
+/* VERY NARROW cards (testimonials, steps): centered — perfectly
+   symmetric on both sides with no stretched word gaps. */
+.review-card { text-align: center; }
+.review-quote {
+  text-align: center;
+  hyphens: none;
+  -webkit-hyphens: none;
+}
+.review-who { justify-content: center; text-align: left; }
+.step { text-align: center; }
+.step p { text-align: center; }
 .prose strong { color: var(--ink); }
 .prose ul, .prose ol { margin: 0 0 1.2rem 1.3rem; color: var(--muted); }
 .prose li { margin-bottom: 0.45rem; }
