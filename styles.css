@@ -1975,22 +1975,32 @@ details.faq-item .faq-body {
 
 /* Hero rotating services line */
 .hero-rotator {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--green-900);
   margin: -0.5rem 0 1.3rem;
-  font-size: 1rem;
+  font-size: 1.12rem;
   animation: fadeUp 0.7s ease 0.3s both;
+  perspective: 400px;
 }
 .hero-rotator .rot-word {
   display: inline-block;
-  color: var(--orange-600);
-  border-bottom: 2px dashed var(--yellow-400);
-  padding-bottom: 1px;
-  animation: rotIn 0.45s ease;
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--orange-600), #f9b856, var(--orange-600));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-bottom: 2.5px dashed var(--yellow-400);
+  padding-bottom: 2px;
+  animation: rotIn 0.5s ease, wordShimmer 3s linear infinite;
+}
+@keyframes wordShimmer {
+  to { background-position: 200% center; }
 }
 @keyframes rotIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: rotateX(75deg) translateY(8px); }
+  to { opacity: 1; transform: rotateX(0) translateY(0); }
 }
 
 /* Gentle breathing on the hero circle */
