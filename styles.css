@@ -423,16 +423,39 @@ a.topbar-item:hover { color: var(--yellow-400); }
   word-break: keep-all;
 }
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
-/* Soft breathing glow keeps the primary CTA alive */
-.hero-actions .btn-primary,
-.cta-actions .btn-whatsapp,
-.cta-actions .btn-light { animation: softPulse 2.6s ease-in-out infinite; }
-@keyframes softPulse {
-  0%, 100% { box-shadow: 0 5px 14px rgba(30, 70, 32, 0.18); }
-  50% { box-shadow: 0 10px 26px rgba(30, 70, 32, 0.3); }
+/* FAQ-button style effects on every primary action button site-wide:
+   breathing glow + continuous shine sweep */
+.btn-primary,
+.btn-whatsapp,
+.cta-actions .btn-light,
+.chap-cta,
+.mq-btn {
+  position: relative;
+  overflow: hidden;
+  animation: allPulse 2.6s ease-in-out infinite;
+}
+.btn-primary::after,
+.btn-whatsapp::after,
+.cta-actions .btn-light::after,
+.chap-cta::after,
+.mq-btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -85%;
+  width: 50%; height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: skewX(-20deg);
+  animation: btnShine 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes allPulse {
+  0%, 100% { box-shadow: 0 5px 14px rgba(30, 70, 32, 0.16); }
+  50% { box-shadow: 0 10px 26px rgba(245, 146, 30, 0.42); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-actions .btn-primary, .cta-actions .btn-whatsapp, .cta-actions .btn-light { animation: none; }
+  .btn-primary, .btn-whatsapp, .cta-actions .btn-light, .chap-cta, .mq-btn { animation: none; }
+  .btn-primary::after, .btn-whatsapp::after, .cta-actions .btn-light::after,
+  .chap-cta::after, .mq-btn::after { display: none; }
   .btn::before, .service-card::after { display: none; }
 }
 
