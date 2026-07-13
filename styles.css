@@ -28,6 +28,8 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
+/* Anchored sections land below the sticky header */
+section[id] { scroll-margin-top: 84px; }
 
 body {
   font-family: var(--font-body);
@@ -1521,7 +1523,7 @@ details.faq-item .faq-body {
 .footer .footer-grid { width: min(1360px, 100% - 2.5rem); }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.5fr fit-content(500px) 0.95fr;
+  grid-template-columns: 1.05fr 0.65fr fit-content(500px) 0.9fr;
   gap: 2.5rem;
   padding: 3.5rem 0 2.5rem;
 }
@@ -1555,8 +1557,9 @@ details.faq-item .faq-body {
 }
 .footer-col a:hover { color: var(--yellow-400); }
 /* Contact rows: icon + text, like a professional contact block */
-.footer-col .foot-row { display: flex; align-items: flex-start; gap: 0.55rem; }
-.foot-num { margin-bottom: 0.55rem; }
+.footer-col .foot-row { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.75rem; }
+.footer-col .foot-row.foot-addr { align-items: flex-start; }
+.foot-num { margin-bottom: 0.75rem; }
 .foot-num a { margin-bottom: 0; }
 .footer-col .foot-row > span:last-child { color: inherit; margin-bottom: 0; }
 .footer-col .fr-ic {
@@ -1564,13 +1567,14 @@ details.faq-item .faq-body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
-  margin: 1px 0 0;
-  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
 }
-.fr-ic svg { width: 12px; height: 12px; fill: currentColor; }
+.foot-addr .fr-ic { margin-top: -3px; }
+.fr-ic svg { width: 16px; height: 16px; fill: currentColor; }
 .footer-col .fr-call { color: var(--yellow-400); }
 .footer-col .fr-wa { color: #4fe083; }
 .footer-col .fr-wa:hover { color: #7bf0a6; }
