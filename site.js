@@ -147,7 +147,7 @@
             '<a href="tel:+919996667152">Call / WhatsApp: 99966-67152</a>' +
           '</div>' +
           '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>' +
-          '<a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1640/12, Ground Floor,<br/>Opp. 3rd Gate KUK, Kurukshetra,<br/>Haryana, India</a>' +
+          '<a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1640/12, Ground Floor,<br/>Opp. 3rd Gate Kurukshetra University,<br/>Kurukshetra, Haryana, India</a>' +
         '</div>' +
       '</div>' +
       '<div class="footer-bottom"><div class="container"><p>© <span id="year"></span> Nimbark Research Insights. All rights reserved.</p></div></div>' +
@@ -246,7 +246,7 @@
             '<a href="https://wa.me/' + WHATSAPP + '" target="_blank" rel="noopener" class="mq-btn mq-wa">' + ICON.wa + 'WhatsApp Now</a>' +
             '<a href="tel:' + PHONE_TEL + '" class="mq-btn mq-call">' + ICON.phone + 'Call Now</a>' +
           '</div>' +
-          '<p class="mq-info"><a href="mailto:' + EMAIL + '">' + EMAIL + '</a><span> · </span><a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1640/12, Opp. 3rd Gate KUK, Kurukshetra</a></p>' +
+          '<p class="mq-info"><a href="mailto:' + EMAIL + '">' + EMAIL + '</a><span> · </span><a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1640/12, Opp. 3rd Gate Kurukshetra University, Kurukshetra</a></p>' +
         '</div>' +
       '</div></div>'
     );
