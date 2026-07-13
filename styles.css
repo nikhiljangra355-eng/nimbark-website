@@ -477,7 +477,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   background: linear-gradient(135deg, #14311a, var(--green-900) 45%, #2a5c2e);
   border-top: 3px solid var(--yellow-400);
   border-bottom: 3px solid var(--yellow-400);
-  padding: 1.7rem 0 1.9rem;
+  padding: 1.1rem 0 1.3rem;
 }
 /* Light beam sweeping across the strip so the USP band catches the eye */
 .trust-strip::after {
@@ -501,23 +501,25 @@ a.topbar-item:hover { color: var(--yellow-400); }
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.9rem;
 }
 .trust-inner {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 2rem;
-  row-gap: 1.4rem;
-  max-width: 1060px;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1.1rem;
+  row-gap: 1.2rem;
+  width: min(1400px, 100% - 2.5rem);
 }
 .trust-item {
   display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
 }
 .trust-icon {
   flex-shrink: 0;
-  width: 42px; height: 42px;
+  width: 40px; height: 40px;
   border-radius: 11px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -527,7 +529,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   color: var(--yellow-400);
   animation: trustGlow 5.4s ease-in-out infinite;
 }
-.trust-icon svg { color: inherit; width: 20px; height: 20px; }
+.trust-icon svg { color: inherit; width: 19px; height: 19px; }
 /* Icons light up one after another — draws the eye across all six USPs */
 .trust-item:nth-child(1) .trust-icon { animation-delay: 0s; }
 .trust-item:nth-child(2) .trust-icon { animation-delay: 0.9s; }
@@ -556,20 +558,24 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .trust-text b {
   display: block;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 0.15rem;
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
 }
 .trust-text small {
   display: block;
   color: #b9cbb9;
-  font-size: 0.78rem;
-  line-height: 1.45;
+  font-size: 0.7rem;
+  line-height: 1.4;
 }
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+  .trust-inner { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
   .trust-inner { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 560px) {
+@media (max-width: 460px) {
   .trust-inner { grid-template-columns: 1fr; }
 }
 
@@ -2269,7 +2275,7 @@ details.faq-item .faq-body {
   /* Visually compact so the trust strip enters the first screen */
   transform: scale(0.93);
   transform-origin: top center;
-  margin-bottom: -56px;
+  margin-bottom: -68px;
 }
 .story-scene {
   position: absolute;
