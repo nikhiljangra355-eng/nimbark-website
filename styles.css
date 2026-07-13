@@ -791,17 +791,12 @@ a.topbar-item:hover { color: var(--yellow-400); }
   margin-bottom: 1rem;
 }
 
-/* WIDE content columns (600px+): justified — both edges straight.
-   Narrow cards are NOT justified: stretching words across a thin
-   column creates ugly gaps between words. */
+/* All multi-line content paragraphs: justified for symmetric edges.
+   Aggressive hyphenation + word-breaking keeps gaps small even in
+   narrow cards. */
 .prose p,
 .faq-body p,
-.consult-copy > p {
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-}
-/* NARROW cards: clean left edge, tidy wrapping, no stretched gaps */
+.consult-copy > p,
 .service-card p,
 .step p,
 .post-card-body p,
@@ -809,9 +804,10 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .side-card p,
 .review-quote,
 .end-disc {
-  text-align: left;
+  text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
+  overflow-wrap: break-word;
 }
 .prose strong { color: var(--ink); }
 .prose ul, .prose ol { margin: 0 0 1.2rem 1.3rem; color: var(--muted); }
