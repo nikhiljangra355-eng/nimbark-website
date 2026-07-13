@@ -789,6 +789,20 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .prose p {
   color: var(--muted);
   margin-bottom: 1rem;
+}
+
+/* Site-wide: multi-line content paragraphs read symmetric —
+   both edges straight, long words hyphenated */
+.prose p,
+.service-card p,
+.step p,
+.faq-body p,
+.post-card-body p,
+.footer-brand p,
+.side-card p,
+.consult-copy > p,
+.review-quote,
+.end-disc {
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
