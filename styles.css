@@ -168,9 +168,10 @@ svg { fill: currentColor; }
 .topbar {
   background: var(--green-900);
   color: #dbe8db;
-  font-size: 0.82rem;
-  padding: 0.45rem 0;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
 }
+.topbar .icon-xs { width: 16px; height: 16px; }
 .topbar-inner {
   display: flex;
   justify-content: space-between;
