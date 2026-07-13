@@ -375,7 +375,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   align-items: center;
   gap: 3rem;
   /* Kept tight so the trust strip below is visible on the first screen */
-  padding: 1rem 0 1.2rem;
+  padding: 1rem 0 0.7rem;
 }
 .hero-badge {
   display: inline-block;
@@ -1728,7 +1728,10 @@ details.faq-item .faq-body {
   position: relative;
   background: linear-gradient(90deg, #14311a, var(--green-700) 50%, #14311a);
   overflow: hidden;
-  padding: 0.5rem 0;
+  padding: 0.45rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   /* Items fade in/out softly at both edges */
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
@@ -1752,8 +1755,10 @@ details.faq-item .faq-body {
   display: flex;
   gap: 0.9rem;
   width: max-content;
-  animation: tickerScroll 36s linear infinite;
+  animation: tickerScroll 32s linear infinite;
 }
+/* Second row drifts the opposite way */
+.ticker-rev { animation-direction: reverse; animation-duration: 38s; }
 .ticker:hover .ticker-track { animation-play-state: paused; }
 .ticker-item {
   display: inline-flex;
@@ -1781,15 +1786,15 @@ details.faq-item .faq-body {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
 }
 .ticker-item::before {
-  content: "✦";
-  color: var(--orange-500);
+  content: "✅";
+  font-size: 0.8em;
   display: inline-block;
   animation: starTwinkle 2.4s ease-in-out infinite;
 }
 .ticker-item:nth-child(odd)::before { animation-delay: 1.2s; }
 @keyframes starTwinkle {
-  0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.75; }
-  50% { transform: rotate(180deg) scale(1.35); opacity: 1; }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
 }
 @media (prefers-reduced-motion: reduce) {
   .ticker::after, .ticker-item::before { animation: none; }
@@ -2295,7 +2300,7 @@ details.faq-item .faq-body {
   /* Visually compact so the trust strip enters the first screen */
   transform: scale(0.93);
   transform-origin: top center;
-  margin-bottom: -62px;
+  margin-bottom: -84px;
 }
 .story-scene {
   position: absolute;
