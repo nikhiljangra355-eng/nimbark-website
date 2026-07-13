@@ -1752,6 +1752,15 @@ details.faq-item .faq-body {
   color: var(--green-900);
   transition: color 0.2s ease;
   cursor: default;
+  /* Bubble bob: each item floats gently up and down */
+  animation: itemBob 2.8s ease-in-out infinite;
+}
+.ticker-item:nth-child(4n+2) { animation-delay: 0.7s; }
+.ticker-item:nth-child(4n+3) { animation-delay: 1.4s; }
+.ticker-item:nth-child(4n+4) { animation-delay: 2.1s; }
+@keyframes itemBob {
+  0%, 100% { transform: translateY(1.6px); }
+  50% { transform: translateY(-2.6px); }
 }
 .ticker-item:hover { color: var(--orange-600); }
 .ticker-item::before {
@@ -1767,7 +1776,7 @@ details.faq-item .faq-body {
   50% { transform: rotate(180deg) scale(1.35); opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .ticker-item::before { animation: none; }
+  .ticker-item, .ticker-item::before { animation: none; }
 }
 @keyframes tickerScroll {
   from { transform: translateX(0); }
