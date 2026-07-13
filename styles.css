@@ -1517,10 +1517,6 @@ details.faq-item .faq-body {
 
 /* ---------- Footer ---------- */
 .footer { background: var(--green-900); color: #c8d6c8; }
-.foot-num { display: flex; align-items: center; gap: 0.45rem; }
-.foot-num .foot-wa { color: #4fe083; display: inline-flex; }
-.foot-num .foot-wa:hover { color: #7bf0a6; }
-.foot-num svg { width: 15px; height: 15px; fill: currentColor; }
 /* Wider canvas so every service name fits on a single line */
 .footer .footer-grid { width: min(1360px, 100% - 2.5rem); }
 .footer-grid {
@@ -1558,6 +1554,28 @@ details.faq-item .faq-body {
   text-wrap: balance;
 }
 .footer-col a:hover { color: var(--yellow-400); }
+/* Contact rows: icon + text, like a professional contact block */
+.footer-col .foot-row { display: flex; align-items: flex-start; gap: 0.55rem; }
+.foot-num { margin-bottom: 0.55rem; }
+.foot-num a { margin-bottom: 0; }
+.footer-col .foot-row > span:last-child { color: inherit; margin-bottom: 0; }
+.footer-col .fr-ic {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin: 1px 0 0;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.fr-ic svg { width: 12px; height: 12px; fill: currentColor; }
+.footer-col .fr-call { color: var(--yellow-400); }
+.footer-col .fr-wa { color: #4fe083; }
+.footer-col .fr-wa:hover { color: #7bf0a6; }
+.footer-col .fr-mail { color: #ffb15e; }
+.footer-col .fr-pin { color: #ff8a80; }
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding: 1.1rem 0;
