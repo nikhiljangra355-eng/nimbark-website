@@ -2331,11 +2331,11 @@ details.faq-item .faq-body {
 
 /* --- Scene 2: thesis document --- */
 .doc {
-  width: 330px;
+  width: 352px;
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 24px 55px rgba(30, 70, 32, 0.2);
-  padding: 22px 24px 46px;
+  padding: 24px 24px 50px;
   position: relative;
 }
 .doc-pen {
@@ -2345,17 +2345,17 @@ details.faq-item .faq-body {
   animation: penWiggle 1.2s ease-in-out infinite;
 }
 @keyframes penWiggle { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(9deg); } }
-.doc-head b { color: var(--green-900); font-size: 17px; }
-.doc-head small { display: block; color: #97a399; font-size: 9.5px; letter-spacing: 1.1px; margin-top: 2px; }
-.row { margin-top: 13px; position: relative; }
-.rl { font-size: 11.5px; font-weight: 600; color: var(--green-700); }
-.rl i { font-style: normal; color: var(--orange-600); font-size: 10px; }
+.doc-head b { color: var(--green-900); font-size: 20px; }
+.doc-head small { display: block; color: #7c887e; font-size: 11px; letter-spacing: 1.1px; margin-top: 3px; }
+.row { margin-top: 14px; position: relative; }
+.rl { font-size: 13.5px; font-weight: 600; color: var(--green-700); }
+.rl i { font-style: normal; color: var(--orange-600); font-size: 11.5px; }
 .rc {
   position: absolute; right: 0; top: 0;
-  color: var(--green-500); font-weight: 800; font-size: 13px;
+  color: var(--green-500); font-weight: 800; font-size: 15px;
   opacity: 0;
 }
-.bar { height: 7px; border-radius: 4px; background: #eef1ee; margin-top: 5px; overflow: hidden; }
+.bar { height: 8px; border-radius: 4px; background: #eef1ee; margin-top: 5px; overflow: hidden; }
 .fill {
   height: 100%;
   width: 0;
@@ -2378,8 +2378,8 @@ details.faq-item .faq-body {
   border: 3px solid var(--green-500);
   color: var(--green-500);
   font-weight: 800;
-  font-size: 13.5px;
-  padding: 5px 12px;
+  font-size: 15.5px;
+  padding: 6px 13px;
   border-radius: 9px;
   transform: rotate(-11deg) scale(3);
   opacity: 0;
@@ -2403,19 +2403,19 @@ details.faq-item .faq-body {
 .run .win-fill { animation: winGrow 1.6s ease 0.15s forwards; }
 @keyframes winGrow { to { width: 100%; } }
 .win-steps { display: flex; justify-content: space-between; position: relative; }
-.wst { text-align: center; width: 86px; position: relative; }
+.wst { text-align: center; width: 88px; position: relative; }
 .wdot {
-  width: 76px; height: 76px;
+  width: 84px; height: 84px;
   margin: 0 auto 10px;
   border-radius: 50%;
   background: #fff;
   border: 4px solid #e4e9e4;
   display: grid;
   place-items: center;
-  font-size: 32px;
+  font-size: 38px;
   box-shadow: 0 6px 16px rgba(30, 70, 32, 0.1);
 }
-.wst b { font-size: 13px; color: var(--green-900); }
+.wst b { font-size: 15px; color: var(--green-900); }
 .run .wdot { animation: dotLite 0.45s ease forwards; animation-play-state: paused; }
 .run .w1 .wdot { animation-delay: 0.2s; animation-play-state: running; }
 .run .w2 .wdot { animation-delay: 0.7s; animation-play-state: running; }
@@ -2426,9 +2426,9 @@ details.faq-item .faq-body {
 }
 .wcap {
   position: absolute;
-  top: -58px; left: 50%;
-  margin-left: -23px;
-  font-size: 46px;
+  top: -64px; left: 50%;
+  margin-left: -26px;
+  font-size: 52px;
   opacity: 0;
 }
 .run .wcap { animation: capFly 0.5s ease 1.75s forwards; }
@@ -2441,7 +2441,7 @@ details.faq-item .faq-body {
   text-align: center;
   margin-top: 40px;
   font-weight: 700;
-  font-size: 14.5px;
+  font-size: 17px;
   color: var(--green-900);
   opacity: 0;
 }
@@ -2466,18 +2466,18 @@ details.faq-item .faq-body {
 
 /* --- Scene 4: closing card --- */
 .endcard {
-  width: 340px;
+  width: 354px;
   background: #fff;
   border-radius: 18px;
   border-top: 6px solid var(--orange-500);
   box-shadow: 0 24px 55px rgba(30, 70, 32, 0.2);
-  padding: 30px 26px 22px;
+  padding: 28px 24px 22px;
   text-align: center;
 }
 .end-logo {
   display: block;
   width: 100%;
-  max-width: 276px;
+  max-width: 306px;
   height: auto;
   aspect-ratio: 380 / 100;
   border-radius: 12px;
@@ -2489,7 +2489,7 @@ details.faq-item .faq-body {
   font-family: var(--font-display);
   font-style: italic;
   color: var(--green-700);
-  font-size: 15.5px;
+  font-size: 17px;
   line-height: 1.55;
   margin-bottom: 18px;
   opacity: 0;
@@ -2499,8 +2499,8 @@ details.faq-item .faq-body {
   background: var(--orange-500);
   color: #fff;
   font-weight: 700;
-  font-size: 14px;
-  padding: 9px 26px;
+  font-size: 15.5px;
+  padding: 10px 28px;
   border-radius: 999px;
   margin-bottom: 18px;
   box-shadow: 0 8px 20px rgba(245, 146, 30, 0.35);
@@ -2509,7 +2509,7 @@ details.faq-item .faq-body {
 .end-disc {
   border-top: 1px solid var(--line);
   padding-top: 12px;
-  font-size: 11.5px;
+  font-size: 12.5px;
   line-height: 1.6;
   color: var(--ink);
   text-align: left;
