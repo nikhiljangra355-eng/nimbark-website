@@ -1395,9 +1395,9 @@ details.faq-item .faq-body {
 .chap-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
-  max-width: 980px;
-  margin: 0 auto 1.1rem;
+  gap: 1.1rem;
+  max-width: 1100px;
+  margin: 0 auto 1.2rem;
 }
 @media (max-width: 820px) {
   .chap-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1411,8 +1411,8 @@ details.faq-item .faq-body {
   background: #fff;
   border: 1px solid var(--line);
   border-top: 3px solid var(--orange-500);
-  border-radius: 10px;
-  padding: 0.72rem 0.8rem 0.7rem;
+  border-radius: 12px;
+  padding: 1rem 1.05rem 0.95rem;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1423,41 +1423,41 @@ details.faq-item .faq-body {
 .chap-card h3 {
   font-family: var(--font-display);
   color: var(--green-900);
-  font-size: 0.86rem;
-  margin: 0 0 0.15rem;
+  font-size: 1.02rem;
+  margin: 0 0 0.2rem;
 }
 .chap-card p { text-align: left; }
 .chap-benefit {
   color: var(--orange-600);
   font-weight: 600;
-  font-size: 0.68rem;
-  line-height: 1.35;
-  margin-bottom: 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin-bottom: 0.45rem;
 }
 /* Descriptions stay in the page for SEO but are hidden so all
    nine cards fit in a single screen */
 .chap-desc { display: none; }
 .chap-inc {
-  font-size: 0.56rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  letter-spacing: 0.7px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   color: var(--green-700);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
 }
 .chap-card ul {
   list-style: none;
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.75rem;
   padding: 0;
   flex: 1;
 }
 .chap-card li {
   position: relative;
-  padding-left: 0.9rem;
-  font-size: 0.69rem;
-  line-height: 1.35;
+  padding-left: 1.05rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
   color: var(--ink);
-  margin-bottom: 0.16rem;
+  margin-bottom: 0.22rem;
 }
 .chap-card li::before {
   content: '✓';
@@ -1474,8 +1474,8 @@ details.faq-item .faq-body {
   color: #fff;
   font-family: inherit;
   font-weight: 700;
-  font-size: 0.66rem;
-  padding: 0.4rem 0.8rem;
+  font-size: 0.78rem;
+  padding: 0.5rem 0.95rem;
   border: 0;
   border-radius: 999px;
   cursor: pointer;
