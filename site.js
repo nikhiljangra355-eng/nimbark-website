@@ -147,7 +147,7 @@
             '<a href="tel:+919996667152">Call / WhatsApp: 99966-67152</a>' +
           '</div>' +
           '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>' +
-          '<a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1640/12, Ground Floor, Opp. 3rd Gate Kurukshetra University, Kurukshetra, Haryana, India</a>' +
+          '<a href="' + MAPS_URL + '" target="_blank" rel="noopener">#1640/12, Opp. 3rd Gate Kurukshetra University, Kurukshetra, Haryana, India</a>' +
         '</div>' +
       '</div>' +
       '<div class="footer-bottom"><div class="container"><p>© <span id="year"></span> Nimbark Research Insights. All rights reserved.</p></div></div>' +

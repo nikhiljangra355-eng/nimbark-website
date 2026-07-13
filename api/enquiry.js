@@ -144,7 +144,7 @@ function autoReplyHtml(d) {
       <p style="margin:16px 0;">
         📞 <strong>Call:</strong> <a href="tel:+919588142496" style="color:#2d6a30;">95881-42496</a> · <a href="tel:+919996667152" style="color:#2d6a30;">99966-67152</a><br/>
         💬 <strong>WhatsApp:</strong> <a href="https://wa.me/919996667152" style="color:#2d6a30;">99966-67152</a><br/>
-        📍 <strong>Office:</strong> #1640/12, Ground Floor, Opp. 3rd Gate Kurukshetra University, Kurukshetra, Haryana
+        📍 <strong>Office:</strong> #1640/12, Opp. 3rd Gate Kurukshetra University, Kurukshetra, Haryana
       </p>
       <p>Your details are kept strictly confidential and are never shared with third parties.</p>
       <p>Warm regards,<br/><strong>Team Nimbark Research Insights</strong></p>
