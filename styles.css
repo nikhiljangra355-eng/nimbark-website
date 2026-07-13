@@ -469,7 +469,38 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .breadcrumb a { color: var(--yellow-400); }
 
 /* ---------- Trust strip ---------- */
-.trust-strip { background: var(--green-900); padding: 1.9rem 0; }
+.trust-strip {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #14311a, var(--green-900) 45%, #2a5c2e);
+  border-top: 3px solid var(--yellow-400);
+  border-bottom: 3px solid var(--yellow-400);
+  padding: 1.7rem 0 1.9rem;
+}
+/* Light beam sweeping across the strip so the USP band catches the eye */
+.trust-strip::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -30%;
+  width: 18%; height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(247, 201, 72, 0.14), transparent);
+  transform: skewX(-18deg);
+  animation: trustSweep 5s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes trustSweep {
+  0% { left: -30%; }
+  60%, 100% { left: 130%; }
+}
+.trust-title {
+  text-align: center;
+  color: var(--yellow-400);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
 .trust-inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -491,8 +522,35 @@ a.topbar-item:hover { color: var(--yellow-400); }
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--yellow-400);
+  animation: trustGlow 5.4s ease-in-out infinite;
 }
-.trust-icon svg { color: var(--yellow-400); width: 20px; height: 20px; }
+.trust-icon svg { color: inherit; width: 20px; height: 20px; }
+/* Icons light up one after another — draws the eye across all six USPs */
+.trust-item:nth-child(1) .trust-icon { animation-delay: 0s; }
+.trust-item:nth-child(2) .trust-icon { animation-delay: 0.9s; }
+.trust-item:nth-child(3) .trust-icon { animation-delay: 1.8s; }
+.trust-item:nth-child(4) .trust-icon { animation-delay: 2.7s; }
+.trust-item:nth-child(5) .trust-icon { animation-delay: 3.6s; }
+.trust-item:nth-child(6) .trust-icon { animation-delay: 4.5s; }
+@keyframes trustGlow {
+  0%, 11% {
+    background: var(--yellow-400);
+    color: var(--green-900);
+    transform: scale(1.14);
+    box-shadow: 0 0 20px rgba(247, 201, 72, 0.55);
+  }
+  17%, 100% {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--yellow-400);
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trust-strip::after { animation: none; }
+  .trust-icon { animation: none; }
+}
 .trust-text b {
   display: block;
   color: #ffffff;
