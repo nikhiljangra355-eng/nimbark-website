@@ -1725,10 +1725,35 @@ details.faq-item .faq-body {
 
 /* ---------- Services ticker ---------- */
 .ticker {
-  background: var(--orange-050);
+  position: relative;
+  background: linear-gradient(90deg, var(--orange-050), #fdeed3, var(--orange-050));
+  background-size: 200% 100%;
+  animation: tickerGlowBg 6s ease-in-out infinite;
   border-block: 1px solid var(--line);
   overflow: hidden;
   padding: 0.42rem 0;
+  /* Items fade in/out softly at both edges */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+}
+@keyframes tickerGlowBg {
+  0%, 100% { background-position: 0% 0; }
+  50% { background-position: 100% 0; }
+}
+/* Golden beam sweeping along the strip */
+.ticker::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -20%;
+  width: 14%; height: 100%;
+  background: linear-gradient(115deg, transparent, rgba(245, 146, 30, 0.18), transparent);
+  transform: skewX(-18deg);
+  animation: tickerBeam 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes tickerBeam {
+  0% { left: -20%; }
+  65%, 100% { left: 120%; }
 }
 .ticker-track {
   display: flex;
@@ -1745,10 +1770,23 @@ details.faq-item .faq-body {
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--green-900);
+  transition: color 0.2s ease, transform 0.2s ease;
+  cursor: default;
 }
+.ticker-item:hover { color: var(--orange-600); transform: translateY(-2px) scale(1.06); }
 .ticker-item::before {
   content: "✦";
   color: var(--orange-500);
+  display: inline-block;
+  animation: starTwinkle 2.4s ease-in-out infinite;
+}
+.ticker-item:nth-child(odd)::before { animation-delay: 1.2s; color: var(--yellow-400); }
+@keyframes starTwinkle {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.75; }
+  50% { transform: rotate(180deg) scale(1.35); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker, .ticker::after, .ticker-item::before { animation: none; }
 }
 @keyframes tickerScroll {
   from { transform: translateX(0); }
