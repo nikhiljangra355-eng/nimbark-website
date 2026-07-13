@@ -1397,9 +1397,9 @@ details.faq-item .faq-body {
 .chap-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 1rem;
   max-width: 1220px;
-  margin: 0 auto 1.3rem;
+  margin: 0 auto 1.1rem;
 }
 @media (max-width: 820px) {
   .chap-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1414,7 +1414,7 @@ details.faq-item .faq-body {
   border: 1px solid var(--line);
   border-top: 3px solid var(--orange-500);
   border-radius: 12px;
-  padding: 1.25rem 1.3rem 1.15rem;
+  padding: 1rem 1.1rem 0.9rem;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -1425,41 +1425,41 @@ details.faq-item .faq-body {
 .chap-card h3 {
   font-family: var(--font-display);
   color: var(--green-900);
-  font-size: 1.18rem;
-  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  margin: 0 0 0.2rem;
 }
 .chap-card p { text-align: left; }
 .chap-benefit {
   color: var(--orange-600);
   font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.45;
-  margin-bottom: 0.55rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0.45rem;
 }
 /* Descriptions stay in the page for SEO but are hidden so all
    nine cards fit in a single screen */
 .chap-desc { display: none; }
 .chap-inc {
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   color: var(--green-700);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 .chap-card ul {
   list-style: none;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.6rem;
   padding: 0;
   flex: 1;
 }
 .chap-card li {
   position: relative;
-  padding-left: 1.2rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  padding-left: 1.05rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
   color: var(--ink);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.22rem;
 }
 .chap-card li::before {
   content: '✓';
@@ -1476,14 +1476,25 @@ details.faq-item .faq-body {
   color: #fff;
   font-family: inherit;
   font-weight: 700;
-  font-size: 0.9rem;
-  padding: 0.6rem 1.1rem;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.95rem;
   border: 0;
   border-radius: 999px;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 .chap-cta:hover { background: var(--orange-500); transform: translateY(-2px); }
+/* Shorter laptop screens: compact the cards so all nine fit one screen */
+@media (min-width: 821px) and (max-height: 830px) {
+  .chap-grid { gap: 0.75rem; }
+  .chap-card { padding: 0.75rem 0.9rem 0.7rem; border-radius: 10px; }
+  .chap-card h3 { font-size: 0.95rem; margin-bottom: 0.15rem; }
+  .chap-benefit { font-size: 0.76rem; line-height: 1.35; margin-bottom: 0.35rem; }
+  .chap-inc { font-size: 0.64rem; margin-bottom: 0.25rem; }
+  .chap-card ul { margin-bottom: 0.45rem; }
+  .chap-card li { font-size: 0.76rem; line-height: 1.35; margin-bottom: 0.16rem; padding-left: 0.95rem; }
+  .chap-cta { font-size: 0.72rem; padding: 0.38rem 0.8rem; }
+}
 .chap-global {
   background: var(--green-050);
   border: 1px solid var(--line);
