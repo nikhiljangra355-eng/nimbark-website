@@ -21,16 +21,16 @@
     youtube: 'https://www.youtube.com/@nimbarkinsights'
   };
 
+  // Core services — the one list every menu, footer and form uses
   var SERVICES = [
-    { slug: 'phd-thesis', name: 'PhD Thesis Assistance' },
-    { slug: 'synopsis-research-paper', name: 'Synopsis & Research Paper Writing' },
-    { slug: 'data-analysis', name: 'Data Analysis & Interpretation' },
-    { slug: 'journal-publication', name: 'Journal Publication Support' },
-    { slug: 'plagiarism-removal', name: 'Plagiarism Removal & Plagiarism Report' },
+    { slug: 'phd-thesis', name: 'Ph.D Thesis & Dissertation Support' },
+    { slug: 'synopsis-research-paper', name: 'Research Paper & Synopsis Writing Support' },
+    { slug: 'data-analysis', name: 'Data Analysis & Interpretation (SPSS, AMOS, etc.) Support' },
+    { slug: 'journal-publication', name: 'Journal Publication Support — UGC-CARE, Scopus, SCI, Web of Science' },
+    { slug: 'plagiarism-removal', name: 'Plagiarism Removal & Turnitin Report' },
     { slug: 'editing-proofreading', name: 'Academic Editing & Proofreading' },
-    { slug: 'book-publishing', name: 'Book Publishing' },
-    { slug: 'patent-copyright', name: 'Patent & Copyright Assistance' },
-    { slug: 'project-internship-reports', name: 'Project & Internship Reports' }
+    { slug: 'book-publishing', name: 'Book Publishing, Patent & Copyright Filing Support' },
+    { slug: 'project-internship-reports', name: 'Project, Internship & Assignment Support' }
   ];
 
   var ICON = {
@@ -111,7 +111,7 @@
 
   // ---------- Footer ----------
   function buildFooter() {
-    var serviceLinks = SERVICES.slice(0, 6).map(function (s) {
+    var serviceLinks = SERVICES.map(function (s) {
       return '<a href="/services/' + s.slug + '">' + s.name + '</a>';
     }).join('');
 
@@ -271,7 +271,8 @@
       // On a service page, pre-select that service in the form
       var match = location.pathname.match(/^\/services\/([a-z-]+)/);
       if (match) {
-        var svc = SERVICES.filter(function (s) { return s.slug === match[1]; })[0];
+        var slug = match[1] === 'patent-copyright' ? 'book-publishing' : match[1];
+        var svc = SERVICES.filter(function (s) { return s.slug === slug; })[0];
         var select = overlay.querySelector('select[name="service"]');
         if (svc && select) select.value = svc.name;
       }
