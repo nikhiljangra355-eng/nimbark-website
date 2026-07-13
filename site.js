@@ -574,7 +574,7 @@
     if (!story) return;
     var scenes = [].slice.call(story.querySelectorAll('.story-scene'));
     var dots = [].slice.call(story.querySelectorAll('.story-dots span'));
-    var durations = [9000, 8500, 5500, 9500];
+    var durations = [9000, 6500, 3500, 7500];
     var i = 0;
     function show(n) {
       scenes.forEach(function (s, k) {

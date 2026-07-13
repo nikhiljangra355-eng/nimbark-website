@@ -2304,12 +2304,12 @@ details.faq-item .faq-body {
 }
 .run .fill { animation: barType 1.15s ease forwards; }
 .run .rc { animation: ckIn 0.3s ease forwards; }
-.run .r1 .fill { animation-delay: 0.3s; } .run .r1 .rc { animation-delay: 1.1s; }
-.run .r2 .fill { animation-delay: 1.3s; } .run .r2 .rc { animation-delay: 2.1s; }
-.run .r3 .fill { animation-delay: 2.3s; } .run .r3 .rc { animation-delay: 3.1s; }
-.run .r4 .fill { animation-delay: 3.3s; } .run .r4 .rc { animation-delay: 4.1s; }
-.run .r5 .fill { animation-delay: 4.3s; } .run .r5 .rc { animation-delay: 5.1s; }
-.run .r6 .fill { animation-delay: 5.3s; } .run .r6 .rc { animation-delay: 6.1s; }
+.run .r1 .fill { animation-delay: 0.3s; } .run .r1 .rc { animation-delay: 0.95s; }
+.run .r2 .fill { animation-delay: 1.1s; } .run .r2 .rc { animation-delay: 1.75s; }
+.run .r3 .fill { animation-delay: 1.9s; } .run .r3 .rc { animation-delay: 2.55s; }
+.run .r4 .fill { animation-delay: 2.7s; } .run .r4 .rc { animation-delay: 3.35s; }
+.run .r5 .fill { animation-delay: 3.5s; } .run .r5 .rc { animation-delay: 4.15s; }
+.run .r6 .fill { animation-delay: 4.3s; } .run .r6 .rc { animation-delay: 4.95s; }
 @keyframes barType { to { width: 100%; } }
 @keyframes ckIn { to { opacity: 1; } }
 .doc-stamp {
@@ -2324,7 +2324,7 @@ details.faq-item .faq-body {
   transform: rotate(-11deg) scale(3);
   opacity: 0;
 }
-.run .doc-stamp { animation: stampIn 0.5s ease 6.5s forwards; }
+.run .doc-stamp { animation: stampIn 0.5s ease 5.2s forwards; }
 @keyframes stampIn { to { opacity: 1; transform: rotate(-11deg) scale(1); } }
 
 /* --- Scene 3: success --- */
@@ -2340,7 +2340,7 @@ details.faq-item .faq-body {
   height: 100%; width: 0; border-radius: 3px;
   background: linear-gradient(90deg, var(--green-500), var(--orange-500));
 }
-.run .win-fill { animation: winGrow 3.2s ease 0.3s forwards; }
+.run .win-fill { animation: winGrow 2.2s ease 0.2s forwards; }
 @keyframes winGrow { to { width: 100%; } }
 .win-steps { display: flex; justify-content: space-between; position: relative; }
 .wst { text-align: center; width: 86px; position: relative; }
@@ -2357,10 +2357,10 @@ details.faq-item .faq-body {
 }
 .wst b { font-size: 13px; color: var(--green-900); }
 .run .wdot { animation: dotLite 0.45s ease forwards; animation-play-state: paused; }
-.run .w1 .wdot { animation-delay: 0.4s; animation-play-state: running; }
-.run .w2 .wdot { animation-delay: 1.3s; animation-play-state: running; }
-.run .w3 .wdot { animation-delay: 2.2s; animation-play-state: running; }
-.run .w4 .wdot { animation-delay: 3.1s; animation-play-state: running; }
+.run .w1 .wdot { animation-delay: 0.3s; animation-play-state: running; }
+.run .w2 .wdot { animation-delay: 0.9s; animation-play-state: running; }
+.run .w3 .wdot { animation-delay: 1.5s; animation-play-state: running; }
+.run .w4 .wdot { animation-delay: 2.1s; animation-play-state: running; }
 @keyframes dotLite {
   to { border-color: var(--green-500); box-shadow: 0 10px 24px rgba(61, 139, 64, 0.3); transform: scale(1.1); }
 }
@@ -2371,7 +2371,7 @@ details.faq-item .faq-body {
   font-size: 46px;
   opacity: 0;
 }
-.run .wcap { animation: capFly 0.9s ease 3.6s forwards; }
+.run .wcap { animation: capFly 0.7s ease 2.3s forwards; }
 @keyframes capFly {
   0% { opacity: 0; transform: translateY(26px) rotate(-20deg); }
   60% { opacity: 1; transform: translateY(-12px) rotate(8deg); }
@@ -2385,13 +2385,13 @@ details.faq-item .faq-body {
   color: var(--green-900);
   opacity: 0;
 }
-.run .win-msg { animation: msgPop 0.6s ease 4.2s forwards; }
+.run .win-msg { animation: msgPop 0.5s ease 2.7s forwards; }
 .wconf { position: absolute; font-size: 20px; opacity: 0; }
 .run .wconf { animation: confFall 1.5s ease forwards; }
-.run .c1 { right: 6%; top: -6%; animation-delay: 3.9s; }
-.run .c2 { right: 18%; top: -14%; animation-delay: 4.1s; }
-.run .c3 { right: 0%; top: -12%; animation-delay: 4.25s; }
-.run .c4 { right: 26%; top: -4%; animation-delay: 4.4s; }
+.run .c1 { right: 6%; top: -6%; animation-delay: 2.6s; }
+.run .c2 { right: 18%; top: -14%; animation-delay: 2.75s; }
+.run .c3 { right: 0%; top: -12%; animation-delay: 2.9s; }
+.run .c4 { right: 26%; top: -4%; animation-delay: 3.05s; }
 @keyframes confFall {
   20% { opacity: 1; }
   100% { opacity: 0; transform: translateY(80px) rotate(230deg); }
