@@ -805,15 +805,14 @@ a.topbar-item:hover { color: var(--yellow-400); }
   -webkit-hyphens: auto;
   overflow-wrap: break-word;
 }
-/* VERY NARROW cards (testimonials, steps): centered — perfectly
-   symmetric on both sides with no stretched word gaps. */
-.review-card { text-align: center; }
+/* Testimonial cards sized wide enough (4 per view) for clean
+   justified quotes */
 .review-quote {
-  text-align: center;
-  hyphens: none;
-  -webkit-hyphens: none;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
-.review-who { justify-content: center; text-align: left; }
+/* Steps: centered — small cards read symmetric without gaps */
 .step { text-align: center; }
 .step p { text-align: center; }
 .prose strong { color: var(--ink); }
@@ -1878,7 +1877,7 @@ details.faq-item .faq-body {
   will-change: transform;
 }
 .review-card {
-  flex: 0 0 calc((100% - 4.4rem) / 5);
+  flex: 0 0 calc((100% - 3.3rem) / 4);
   display: flex;
   flex-direction: column;
   background: #fff;

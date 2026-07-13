@@ -448,7 +448,7 @@
 
     function visibleCount() {
       var w = window.innerWidth;
-      return w <= 560 ? 1 : w <= 800 ? 2 : w <= 1100 ? 3 : 5;
+      return w <= 560 ? 1 : w <= 800 ? 2 : w <= 1100 ? 3 : 4;
     }
     function maxIndex() {
       return Math.max(0, cards.length - visibleCount());
