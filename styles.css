@@ -1527,7 +1527,14 @@ details.faq-item .faq-body {
   gap: 2.5rem;
   padding: 3.5rem 0 2.5rem;
 }
-.footer-brand p { font-size: 0.88rem; margin-top: 0.6rem; }
+.footer-brand p {
+  font-size: 0.88rem;
+  margin-top: 0.6rem;
+  /* Justified like the rest, but never split a word across lines */
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: keep-all;
+}
 .footer-tagline {
   color: var(--yellow-400);
   font-weight: 600;
@@ -1545,6 +1552,8 @@ details.faq-item .faq-body {
   color: #c8d6c8;
   font-size: 0.88rem;
   margin-bottom: 0.55rem;
+  /* Wrapped lines break at even lengths — no lone word on line two */
+  text-wrap: balance;
 }
 .footer-col a:hover { color: var(--yellow-400); }
 .footer-bottom {

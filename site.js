@@ -26,7 +26,7 @@
     { slug: 'phd-thesis', name: 'Ph.D Thesis & Dissertation Support' },
     { slug: 'synopsis-research-paper', name: 'Research Paper & Synopsis Writing Support' },
     { slug: 'data-analysis', name: 'Data Analysis & Interpretation (SPSS, AMOS, etc.) Support' },
-    { slug: 'journal-publication', name: 'Journal Publication Support — UGC-CARE, Scopus, SCI, Web of Science' },
+    { slug: 'journal-publication', name: 'Journal Publication Support — UGC‑CARE, Scopus, SCI, Web of Science' },
     { slug: 'plagiarism-removal', name: 'Plagiarism Removal & Turnitin Report' },
     { slug: 'editing-proofreading', name: 'Academic Editing & Proofreading' },
     { slug: 'book-publishing', name: 'Book Publishing, Patent & Copyright Filing Support' },
