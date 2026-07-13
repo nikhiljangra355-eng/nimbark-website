@@ -374,7 +374,8 @@ a.topbar-item:hover { color: var(--yellow-400); }
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: 3rem;
-  padding: 4.5rem 0 5rem;
+  /* Kept tight so the trust strip below is visible on the first screen */
+  padding: 1.6rem 0 1.8rem;
 }
 .hero-badge {
   display: inline-block;
@@ -390,17 +391,17 @@ a.topbar-item:hover { color: var(--yellow-400); }
 }
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4.2vw, 3.1rem);
-  line-height: 1.22;
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  line-height: 1.2;
   color: var(--green-900);
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.9rem;
 }
 .hero h1 .accent { color: var(--orange-600); }
 .hero-lead {
-  font-size: 1.08rem;
+  font-size: 1.02rem;
   color: var(--muted);
   max-width: 34rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.3rem;
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
@@ -1766,7 +1767,7 @@ details.faq-item .faq-body {
 .hero-rotator {
   font-weight: 600;
   color: var(--green-900);
-  margin: -0.9rem 0 1.8rem;
+  margin: -0.5rem 0 1.3rem;
   font-size: 1rem;
   animation: fadeUp 0.7s ease 0.3s both;
 }
@@ -2125,7 +2126,16 @@ details.faq-item .faq-body {
 }
 
 /* ---------- Hero story animation (3 scenes) ---------- */
-.story { position: relative; width: 360px; height: 596px; margin-inline: auto; }
+.story {
+  position: relative;
+  width: 360px;
+  height: 596px;
+  margin-inline: auto;
+  /* Visually compact so the trust strip enters the first screen */
+  transform: scale(0.88);
+  transform-origin: top center;
+  margin-bottom: -70px;
+}
 .story-scene {
   position: absolute;
   inset: 0 0 28px 0;
