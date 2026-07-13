@@ -566,6 +566,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   color: #c4d4c4;
   font-size: 0.82rem;
   line-height: 1.45;
+  text-align: left;
 }
 @media (max-width: 900px) {
   .trust-inner { grid-template-columns: repeat(2, 1fr); }
@@ -923,7 +924,6 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .end-disc,
 .review-quote,
 .step p,
-.trust-text small,
 .pub-card small,
 .chap-benefit,
 .chap-card li,
