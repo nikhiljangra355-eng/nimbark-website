@@ -1754,15 +1754,16 @@ details.faq-item .faq-body {
 }
 .ticker-item:hover { color: var(--orange-600); }
 .ticker-item::before {
-  content: "✅";
-  font-size: 0.85em;
+  content: "✦";
+  color: var(--orange-500);
+  font-size: 1.05em;
   display: inline-block;
   animation: starTwinkle 2.6s ease-in-out infinite;
 }
-.ticker-item:nth-child(odd)::before { animation-delay: 1.3s; }
+.ticker-item:nth-child(odd)::before { animation-delay: 1.3s; color: var(--yellow-400); }
 @keyframes starTwinkle {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.22); }
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.7; }
+  50% { transform: rotate(180deg) scale(1.35); opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ticker-item::before { animation: none; }
