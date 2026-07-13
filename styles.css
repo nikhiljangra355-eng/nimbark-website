@@ -403,8 +403,10 @@ a.topbar-item:hover { color: var(--yellow-400); }
   max-width: 34rem;
   margin-bottom: 1.3rem;
   text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  /* No mid-word breaks: every word stays whole */
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: keep-all;
 }
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
 
