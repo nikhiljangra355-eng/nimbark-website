@@ -613,10 +613,12 @@ a.topbar-item:hover { color: var(--yellow-400); }
 
 /* ---------- How it works (5 steps) ---------- */
 .how { background: #fff; }
+/* Wider row for the 5 step cards so text lines fill evenly */
+.how .container { width: min(1360px, 100% - 2.5rem); }
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.3rem;
+  gap: 1rem;
   counter-reset: step;
 }
 .step {
@@ -624,7 +626,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   background: var(--cream);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.9rem 1.4rem 1.6rem;
+  padding: 1.9rem 1.15rem 1.6rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
