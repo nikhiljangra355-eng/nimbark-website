@@ -1521,9 +1521,11 @@ details.faq-item .faq-body {
 .foot-num .foot-wa { color: #4fe083; display: inline-flex; }
 .foot-num .foot-wa:hover { color: #7bf0a6; }
 .foot-num svg { width: 15px; height: 15px; fill: currentColor; }
+/* Wider canvas so every service name fits on a single line */
+.footer .footer-grid { width: min(1360px, 100% - 2.5rem); }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr 1.1fr 1fr;
+  grid-template-columns: 1.15fr 0.5fr fit-content(500px) 0.95fr;
   gap: 2.5rem;
   padding: 3.5rem 0 2.5rem;
 }
@@ -1706,6 +1708,9 @@ details.faq-item .faq-body {
 /* =====================================================
    Responsive
    ===================================================== */
+@media (max-width: 1100px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns: 1fr; padding: 3.2rem 0; }
   .hero-art { display: none; }
