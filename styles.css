@@ -401,6 +401,9 @@ a.topbar-item:hover { color: var(--yellow-400); }
   color: var(--muted);
   max-width: 34rem;
   margin-bottom: 1.8rem;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
 
