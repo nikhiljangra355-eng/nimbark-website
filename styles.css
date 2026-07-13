@@ -2298,18 +2298,18 @@ details.faq-item .faq-body {
 .ph-head small { font-size: 10.5px; color: #9ad3a0; }
 .ph-chat {
   padding: 9px 8px;
-  height: 486px;
+  height: 522px;
   display: flex;
   flex-direction: column;
   gap: 4px;
   overflow: hidden;
 }
 .msg {
-  max-width: 91%;
+  max-width: 92%;
   padding: 6px 9px;
   border-radius: 11px;
-  font-size: 13.5px;
-  line-height: 1.32;
+  font-size: 14.5px;
+  line-height: 1.3;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
   opacity: 0;
   transform: translateY(14px) scale(0.95);
