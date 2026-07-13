@@ -655,11 +655,11 @@ a.topbar-item:hover { color: var(--yellow-400); }
   display: inline-block;
   background: var(--orange-050);
   color: var(--orange-600);
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: 1.8px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 0.4rem 1rem;
+  padding: 0.45rem 1.2rem;
   border-radius: 999px;
   margin-bottom: 0.9rem;
 }
