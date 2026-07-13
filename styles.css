@@ -2477,6 +2477,7 @@ details.faq-item .faq-body {
   width: 100%;
   max-width: 276px;
   height: auto;
+  aspect-ratio: 380 / 100;
   border-radius: 12px;
   margin: 0 auto 16px;
   box-shadow: 0 8px 20px rgba(30, 70, 32, 0.18);
