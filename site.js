@@ -100,7 +100,7 @@
           '</div>' +
           '<a href="/resources" class="nav-link" data-nav="resources">Resources</a>' +
           '<a href="/faq" class="nav-link" data-nav="faq">FAQ</a>' +
-          '<a href="/contact" class="nav-link" data-nav="contact">Contact</a>' +
+          '<a href="/contact" class="nav-link" data-nav="contact">Contact Us</a>' +
           '<button type="button" class="btn btn-primary nav-cta" data-open-modal>Get Free Consultation</button>' +
         '</nav>' +
         '<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>' +
@@ -138,12 +138,11 @@
         '<div class="footer-col"><h4>Quick Links</h4>' +
           '<a href="/">Home</a><a href="/about">About Us</a><a href="/services">Services</a>' +
           '<a href="/#how-it-works">How It Works</a><a href="/#journal-publications">Journal Publications</a>' +
-          '<a href="/#subjects">Subjects We Cover</a><a href="/#testimonials">Testimonials</a>' +
-          '<a href="/#consultation">Free Consultation</a><a href="/resources">Free Resources</a>' +
-          '<a href="/faq">FAQ</a><a href="/contact">Contact</a>' +
+          '<a href="/#testimonials">Testimonials</a>' +
+          '<a href="/faq">FAQ</a><a href="/contact">Contact Us</a>' +
         '</div>' +
         '<div class="footer-col"><h4>Our Services</h4>' + serviceLinks + '</div>' +
-        '<div class="footer-col"><h4>Contact</h4>' +
+        '<div class="footer-col"><h4>Contact Us</h4>' +
           '<a href="tel:' + PHONE_TEL + '" class="foot-row"><span class="fr-ic fr-call">' + ICON.phone + '</span><span>' + PHONE_DISPLAY + '</span></a>' +
           '<div class="foot-row foot-num">' +
             '<a href="https://wa.me/' + WHATSAPP + '" target="_blank" rel="noopener" class="fr-ic fr-wa" aria-label="WhatsApp on 99966-67152" title="WhatsApp on 99966-67152"><svg viewBox="0 0 24 24" class="icon-xs"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07a8.2 8.2 0 0 1-2.4-1.48 9 9 0 0 1-1.66-2.07c-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 1 1 8.38 4.63zM12.05 2A11.86 11.86 0 0 0 1.8 19.8L.1 24l4.3-1.13A11.85 11.85 0 1 0 12.05 2z"/></svg></a>' +
