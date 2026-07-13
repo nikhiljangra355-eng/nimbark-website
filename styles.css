@@ -231,6 +231,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   border-bottom: 1px solid var(--line);
 }
 .header-inner {
+  width: min(1360px, 100% - 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -286,11 +287,12 @@ a.topbar-item:hover { color: var(--yellow-400); }
   white-space: nowrap;
 }
 
-.nav { display: flex; align-items: center; gap: 1.35rem; }
+.nav { display: flex; align-items: center; gap: 1.05rem; }
 .nav-link {
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--ink);
+  white-space: nowrap;
   position: relative;
   padding: 0.3rem 0;
   background: none;
@@ -312,7 +314,20 @@ a.topbar-item:hover { color: var(--yellow-400); }
 }
 .nav-link:hover::after, .nav-link.active::after { width: 100%; }
 .nav-link.active { color: var(--green-700); }
-.nav-cta { padding: 0.55rem 1.15rem; font-size: 0.85rem; }
+.nav-cta { padding: 0.55rem 1.15rem; font-size: 0.85rem; white-space: nowrap; }
+/* Mid-size screens: compact nav so all links fit one row */
+@media (min-width: 761px) {
+  .nav { gap: 0.85rem; }
+  .nav-link { font-size: 0.93rem; }
+  .nav-cta { font-size: 0.78rem; padding: 0.5rem 0.9rem; }
+  .brand-img .brand-svg { height: 66px; }
+}
+@media (min-width: 1280px) and (max-width: 1400px) {
+  .nav { gap: 0.55rem; }
+  .nav-link { font-size: 0.84rem; }
+  .nav-cta { font-size: 0.7rem; padding: 0.42rem 0.7rem; }
+  .brand-img .brand-svg { height: 54px; }
+}
 
 /* Services dropdown */
 .has-dropdown { position: relative; }
@@ -1753,9 +1768,8 @@ details.faq-item .faq-body {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 760px) {
-  .topbar-right { display: none; }
-
+/* Nav carries many links now — switch to the hamburger menu earlier */
+@media (max-width: 1279px) {
   .nav {
     position: fixed;
     top: 0; right: 0;
@@ -1793,6 +1807,10 @@ details.faq-item .faq-body {
   }
   .has-dropdown.open .dropdown { display: block; visibility: visible; }
   .has-dropdown:hover .dropdown { transform: none; }
+}
+
+@media (max-width: 760px) {
+  .topbar-right { display: none; }
 
   .section { padding: 3.5rem 0; }
   .form-row { grid-template-columns: 1fr; gap: 0; }

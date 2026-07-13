@@ -93,12 +93,14 @@
         '</a>' +
         '<nav class="nav" id="nav" aria-label="Main navigation">' +
           '<a href="/" class="nav-link" data-nav="home">Home</a>' +
-          '<a href="/about" class="nav-link" data-nav="about">About</a>' +
+          '<a href="/about" class="nav-link" data-nav="about">About Us</a>' +
           '<div class="has-dropdown" id="servicesDropdown">' +
             '<a href="/services" class="nav-link" data-nav="services" aria-haspopup="true">Services <svg viewBox="0 0 24 24" class="icon-xs caret"><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg></a>' +
             '<div class="dropdown">' + dropdownLinks + '</div>' +
           '</div>' +
-          '<a href="/resources" class="nav-link" data-nav="resources">Resources</a>' +
+          '<a href="/#how-it-works" class="nav-link">How It Works</a>' +
+          '<a href="/#journal-publications" class="nav-link">Journal Publications</a>' +
+          '<a href="/#testimonials" class="nav-link">Testimonials</a>' +
           '<a href="/faq" class="nav-link" data-nav="faq">FAQ</a>' +
           '<a href="/contact" class="nav-link" data-nav="contact">Contact Us</a>' +
           '<button type="button" class="btn btn-primary nav-cta" data-open-modal>Get Free Consultation</button>' +
