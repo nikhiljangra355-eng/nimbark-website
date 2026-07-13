@@ -483,7 +483,7 @@
     }
     function restart() {
       clearInterval(timer);
-      if (!reduceMotion) timer = setInterval(next, 2500);
+      if (!reduceMotion) timer = setInterval(next, 1500);
     }
     viewport.addEventListener('mouseenter', function () { clearInterval(timer); });
     viewport.addEventListener('mouseleave', restart);
