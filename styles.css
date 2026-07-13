@@ -231,7 +231,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   border-bottom: 1px solid var(--line);
 }
 .header-inner {
-  width: min(1360px, 100% - 2.5rem);
+  width: min(1760px, 100% - 3rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -321,6 +321,12 @@ a.topbar-item:hover { color: var(--yellow-400); }
   .nav-link { font-size: 0.93rem; }
   .nav-cta { font-size: 0.78rem; padding: 0.5rem 0.9rem; }
   .brand-img .brand-svg { height: 66px; }
+}
+@media (min-width: 1620px) {
+  .nav { gap: 1.25rem; }
+  .nav-link { font-size: 1.05rem; }
+  .nav-cta { font-size: 0.88rem; padding: 0.6rem 1.1rem; }
+  .brand-img .brand-svg { height: 78px; }
 }
 @media (min-width: 1280px) and (max-width: 1400px) {
   .nav { gap: 0.55rem; }
