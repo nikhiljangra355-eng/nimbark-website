@@ -375,7 +375,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   align-items: center;
   gap: 3rem;
   /* Kept tight so the trust strip below is visible on the first screen */
-  padding: 1rem 0 0.7rem;
+  padding: 1rem 0 0.3rem;
 }
 .hero-badge {
   display: inline-block;
@@ -501,13 +501,13 @@ a.topbar-item:hover { color: var(--yellow-400); }
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
 }
 .trust-inner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2.4rem;
-  row-gap: 1.3rem;
+  row-gap: 1.1rem;
   width: min(1240px, 100% - 2.5rem);
 }
 .trust-item {
@@ -2268,9 +2268,10 @@ details.faq-item .faq-body {
   height: 596px;
   margin-inline: auto;
   /* Visually compact so the trust strip enters the first screen */
-  transform: scale(0.93);
+  /* margin matches the scaled height exactly so nothing below overlaps */
+  transform: scale(0.9);
   transform-origin: top center;
-  margin-bottom: -74px;
+  margin-bottom: -59px;
 }
 .story-scene {
   position: absolute;
