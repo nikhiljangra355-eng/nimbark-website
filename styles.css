@@ -791,30 +791,32 @@ a.topbar-item:hover { color: var(--yellow-400); }
   margin-bottom: 1rem;
 }
 
-/* WIDE columns: justified — both edges straight, symmetric. */
+/* Every multi-line text block on the site: justified — both edges
+   straight, symmetric. Hyphenation keeps word gaps small. */
 .prose p,
+.prose li,
 .faq-body p,
 .consult-copy > p,
 .service-card p,
 .post-card-body p,
 .footer-brand p,
 .side-card p,
-.end-disc {
+.end-disc,
+.review-quote,
+.step p,
+.trust-text small,
+.pub-card small,
+.chap-benefit,
+.chap-card li,
+.page-hero p,
+.page-hero.with-art .hero-copy p {
   text-align: justify;
   hyphens: auto;
   -webkit-hyphens: auto;
   overflow-wrap: break-word;
 }
-/* Testimonial cards sized wide enough (4 per view) for clean
-   justified quotes */
-.review-quote {
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-}
-/* Steps: centered — small cards read symmetric without gaps */
+/* Step cards keep centred numbers/icons/headings; body text justifies */
 .step { text-align: center; }
-.step p { text-align: center; }
 .prose strong { color: var(--ink); }
 .prose ul, .prose ol { margin: 0 0 1.2rem 1.3rem; color: var(--muted); }
 .prose li { margin-bottom: 0.45rem; }
