@@ -2297,26 +2297,26 @@ details.faq-item .faq-body {
 .ph-head b { font-size: 13px; display: block; line-height: 1.2; }
 .ph-head small { font-size: 10.5px; color: #9ad3a0; }
 .ph-chat {
-  padding: 12px 9px;
+  padding: 9px 8px;
   height: 486px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 4px;
   overflow: hidden;
 }
 .msg {
-  max-width: 84%;
-  padding: 6px 10px;
+  max-width: 91%;
+  padding: 6px 9px;
   border-radius: 11px;
-  font-size: 11.8px;
-  line-height: 1.4;
+  font-size: 13.5px;
+  line-height: 1.32;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
   opacity: 0;
   transform: translateY(14px) scale(0.95);
 }
 .msg.in { background: #fff; align-self: flex-start; border-top-left-radius: 3px; }
 .msg.out { background: #dcf8c6; align-self: flex-end; border-top-right-radius: 3px; }
-.msg .tk { color: #34b7f1; font-size: 10px; float: right; margin: 6px 0 0 7px; }
+.msg .tk { color: #34b7f1; font-size: 10px; float: right; margin: 5px 0 0 6px; }
 .run .msg { animation: msgPop 0.45s ease forwards; }
 .run .m1 { animation-delay: 0.3s; } .run .m2 { animation-delay: 1.2s; }
 .run .m3 { animation-delay: 2.1s; } .run .m4 { animation-delay: 3s; }
