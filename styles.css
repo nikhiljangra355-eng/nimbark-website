@@ -417,7 +417,11 @@ a.topbar-item:hover { color: var(--yellow-400); }
   padding: 1rem 0 0.3rem;
 }
 /* Compact enquiry form beside the story */
-.hero-form { padding: 1.1rem 1.2rem 1rem; animation: fadeUp 0.9s ease 0.4s both; }
+.enquiry-form.hero-form {
+  padding: 1.1rem 1.2rem 1rem;
+  border: 2.5px solid var(--orange-500);
+  animation: fadeUp 0.9s ease 0.4s both;
+}
 .hero-form h3 {
   font-family: var(--font-display);
   color: var(--green-900);
@@ -2666,7 +2670,8 @@ details.faq-item .faq-body {
   width: 358px;
   background: #fff;
   border-radius: 18px;
-  border-top: 6px solid var(--orange-500);
+  border: 2.5px solid var(--orange-500);
+  border-top-width: 6px;
   box-shadow: 0 24px 55px rgba(30, 70, 32, 0.2);
   padding: 26px 19px 20px;
   text-align: center;
