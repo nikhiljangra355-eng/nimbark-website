@@ -407,12 +407,34 @@ a.topbar-item:hover { color: var(--yellow-400); }
   overflow: hidden;
 }
 .hero-inner {
+  /* Wide canvas: copy + phone story + enquiry form, all in one frame */
+  width: min(1620px, 100% - 2.5rem);
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.78fr 0.72fr;
   align-items: center;
-  gap: 3rem;
+  gap: 2.2rem;
   /* Kept tight so the trust strip below is visible on the first screen */
   padding: 1rem 0 0.3rem;
+}
+/* Compact enquiry form beside the story */
+.hero-form { padding: 1.1rem 1.2rem 1rem; animation: fadeUp 0.9s ease 0.4s both; }
+.hero-form h3 {
+  font-family: var(--font-display);
+  color: var(--green-900);
+  font-size: 1.18rem;
+  margin-bottom: 0.7rem;
+}
+.hero-form .form-group { margin-bottom: 0.65rem; }
+.hero-form .form-group label { margin-bottom: 0.25rem; }
+.hero-form .form-group input,
+.hero-form .form-group select,
+.hero-form .form-group textarea { padding: 0.5rem 0.7rem; font-size: 0.9rem; border-radius: 8px; }
+.hero-form .form-row { gap: 0.65rem; }
+.hero-form .btn-block { padding: 0.65rem 1rem; font-size: 0.92rem; }
+.hero-form .form-note { margin-top: 0.55rem; font-size: 0.72rem; }
+@media (max-width: 1279px) {
+  .hero-inner { grid-template-columns: 1.15fr 0.85fr; gap: 3rem; }
+  .hero-form { display: none; }
 }
 .hero-badge {
   display: inline-block;
