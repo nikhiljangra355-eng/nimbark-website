@@ -2278,6 +2278,11 @@ details.faq-item .faq-body {
 
 /* ---------- Service hero illustrations ---------- */
 .page-hero.with-art { text-align: left; }
+/* Slim hero band so the content below enters the first screen */
+.page-hero.hero-slim { padding: 1.2rem 0; }
+.hero-slim .hero-illus { width: min(150px, 100%); }
+.page-hero.hero-slim h1 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-bottom: 0.4rem; }
+.page-hero.hero-slim .breadcrumb { margin-bottom: 0.5rem; }
 .page-hero.with-art .hero-grid {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
