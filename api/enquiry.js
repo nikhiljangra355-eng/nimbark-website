@@ -106,6 +106,32 @@ async function sendEmail({ to, subject, html, replyTo }) {
   return res.json();
 }
 
+// Real-time WhatsApp alert to the owner via CallMeBot (free personal gateway).
+// Configure WA_NOTIFY_PHONE (e.g. 919996667152) and WA_NOTIFY_APIKEY in Vercel.
+// Skipped silently when not configured.
+async function sendWhatsAppAlert(d) {
+  const phone = process.env.WA_NOTIFY_PHONE;
+  const apikey = process.env.WA_NOTIFY_APIKEY;
+  if (!phone || !apikey) return { skipped: true };
+  const text =
+    '🔔 New Website Enquiry — Nimbark\n' +
+    `👤 Name: ${d.name}\n` +
+    `📞 Phone: ${d.phone}\n` +
+    `📧 Email: ${d.email}\n` +
+    (d.service ? `🛠 Service: ${d.service}\n` : '') +
+    (d.message ? `📝 Message: ${d.message.slice(0, 300)}\n` : '') +
+    `🕐 ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST`;
+  const url = 'https://api.callmebot.com/whatsapp.php' +
+    `?phone=${encodeURIComponent(phone)}&apikey=${encodeURIComponent(apikey)}&text=${encodeURIComponent(text)}`;
+  const res = await fetch(url);
+  if (!res.ok) {
+    const detail = await res.text().catch(() => '');
+    console.error(`WhatsApp alert failed (${res.status}): ${detail.slice(0, 200)}`);
+    return { failed: true };
+  }
+  return { sent: true };
+}
+
 function notificationHtml(d) {
   const row = (label, value) =>
     `<tr><td style="padding:8px 14px;font-weight:600;color:#1e4620;white-space:nowrap;vertical-align:top;">${label}</td>` +
@@ -211,6 +237,7 @@ module.exports = async function handler(req, res) {
       subject: 'We received your enquiry — Nimbark Research Insights',
       html: autoReplyHtml(data),
     }),
+    sendWhatsAppAlert(data),
   ]);
   results.forEach((r) => {
     if (r.status === 'rejected') console.error('Email error:', r.reason);

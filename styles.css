@@ -1625,20 +1625,21 @@ details.faq-item .faq-body {
 /* ---------- Floating WhatsApp ---------- */
 .wa-float {
   position: fixed;
-  right: 1.4rem;
-  bottom: 1.4rem;
+  right: 1.5rem;
+  bottom: 2.6rem;
   z-index: 90;
-  width: 56px; height: 56px;
+  width: 62px; height: 62px;
   display: grid;
   place-items: center;
-  background: #25d366;
+  background: linear-gradient(160deg, #2ce571, #1db954);
   color: #fff;
+  border: 3px solid #fff;
   border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 8px 22px rgba(20, 120, 60, 0.45), 0 2px 6px rgba(0, 0, 0, 0.18);
   transition: transform 0.15s ease;
 }
 .wa-float:hover { transform: scale(1.08); }
-.wa-float svg { width: 30px; height: 30px; }
+.wa-float svg { width: 36px; height: 36px; filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15)); }
 
 /* ---------- Mobile bottom action bar ---------- */
 .bottom-bar {
@@ -1829,7 +1830,7 @@ details.faq-item .faq-body {
 
   .bottom-bar { display: flex; }
   body { padding-bottom: 62px; }
-  .wa-float { bottom: 4.8rem; }
+  .wa-float { bottom: 5.4rem; }
 }
 
 @media (max-width: 520px) {
@@ -1959,9 +1960,9 @@ details.faq-item .faq-body {
 .wa-float::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -3px;
   border-radius: 50%;
-  background: #25d366;
+  border: 3px solid rgba(37, 211, 102, 0.8);
   animation: waPulse 2.2s ease-out infinite;
   z-index: -1;
 }
