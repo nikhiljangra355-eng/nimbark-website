@@ -22,7 +22,7 @@
   };
   // Google Analytics 4 measurement ID (e.g. 'G-XXXXXXXXXX').
   // Leave empty to keep analytics off; set it and every page starts tracking.
-  var GA_ID = '';
+  var GA_ID = 'G-0JYW4NTTGE';
 
   function initAnalytics() {
     if (!GA_ID) return;
