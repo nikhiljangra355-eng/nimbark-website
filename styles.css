@@ -730,6 +730,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.4rem;
+  counter-reset: svc;
 }
 .service-card {
   display: block;
@@ -737,10 +738,27 @@ a.topbar-item:hover { color: var(--yellow-400); }
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border-radius: 16px;
   padding: 1.7rem 1.5rem;
+  box-shadow: 0 4px 14px rgba(30, 70, 32, 0.05);
+  counter-increment: svc;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
+/* Big soft chapter-style number in the corner */
+.service-card::before {
+  content: "0" counter(svc);
+  position: absolute;
+  top: 0.55rem;
+  right: 0.9rem;
+  font-family: var(--font-display);
+  font-size: 3.1rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(245, 146, 30, 0.13);
+  pointer-events: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.service-card:hover::before { color: rgba(245, 146, 30, 0.28); transform: scale(1.08); }
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 38px rgba(30, 70, 32, 0.15);
@@ -770,13 +788,14 @@ a.topbar-item:hover { color: var(--yellow-400); }
 .service-card .card-link { transition: color 0.2s ease, transform 0.2s ease; }
 .service-card:hover .card-link { color: var(--orange-600); transform: translateX(5px); }
 .service-icon {
-  width: 54px; height: 54px;
+  width: 58px; height: 58px;
   display: grid;
   place-items: center;
-  background: var(--orange-050);
-  color: var(--orange-600);
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--orange-500), var(--yellow-400));
+  color: #fff;
+  border-radius: 15px;
   margin-bottom: 1rem;
+  box-shadow: 0 8px 18px rgba(245, 146, 30, 0.32);
 }
 .service-icon svg { width: 28px; height: 28px; }
 .service-card h3 {
@@ -790,11 +809,16 @@ a.topbar-item:hover { color: var(--yellow-400); }
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  margin-top: 0.8rem;
-  font-size: 0.85rem;
-  font-weight: 600;
+  margin-top: 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 700;
   color: var(--orange-600);
+  border: 1.5px solid var(--orange-500);
+  border-radius: 999px;
+  padding: 0.38rem 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
+.service-card:hover .card-link { background: var(--orange-500); color: #fff; }
 
 /* ---------- How it works (5 steps) ---------- */
 .how { background: #fff; }
