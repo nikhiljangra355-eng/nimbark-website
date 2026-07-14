@@ -20,6 +20,22 @@
     instagram: 'https://www.instagram.com/nimbarkinsights',
     youtube: 'https://www.youtube.com/@nimbarkinsights'
   };
+  // Google Analytics 4 measurement ID (e.g. 'G-XXXXXXXXXX').
+  // Leave empty to keep analytics off; set it and every page starts tracking.
+  var GA_ID = '';
+
+  function initAnalytics() {
+    if (!GA_ID) return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, { anonymize_ip: true });
+  }
 
   // Core services — the one list every menu, footer and form uses
   var SERVICES = [
@@ -154,7 +170,7 @@
           '<a href="' + MAPS_URL + '" target="_blank" rel="noopener" class="foot-row foot-addr"><span class="fr-ic fr-pin">' + ICON.pin + '</span><span>#1640/12, Opp. 3rd Gate Kurukshetra University, Kurukshetra, Haryana, India</span></a>' +
         '</div>' +
       '</div>' +
-      '<div class="footer-bottom"><div class="container"><p>© <span id="year"></span> Nimbark Research Insights. All rights reserved.</p></div></div>' +
+      '<div class="footer-bottom"><div class="container"><p>© <span id="year"></span> Nimbark Research Insights. All rights reserved. · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Service</a></p></div></div>' +
       '</footer>'
     );
     document.body.appendChild(footer);
@@ -627,6 +643,7 @@
   // ---------- Boot ----------
   function boot() {
     buildHeader();
+    initAnalytics();
     initSkipLink();
     buildFooter();
     buildFloaters();
