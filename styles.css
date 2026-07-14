@@ -98,18 +98,6 @@ svg { fill: currentColor; }
   padding: 0.9rem 2.2rem;
   animation: faqPulse 2.2s ease-in-out infinite;
 }
-.btn-faq-all::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -80%;
-  width: 45%;
-  height: 100%;
-  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-  transform: skewX(-22deg);
-  animation: btnShine 2.6s ease-in-out infinite;
-  pointer-events: none;
-}
 .btn-faq-all:hover {
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 16px 34px rgba(245, 146, 30, 0.5);
@@ -123,11 +111,6 @@ svg { fill: currentColor; }
 @keyframes faqPulse {
   0%, 100% { box-shadow: 0 8px 22px rgba(245, 146, 30, 0.35); transform: scale(1); }
   50% { box-shadow: 0 12px 32px rgba(245, 146, 30, 0.6); transform: scale(1.03); }
-}
-@keyframes btnShine {
-  0% { left: -80%; }
-  55% { left: 130%; }
-  100% { left: 130%; }
 }
 @keyframes arrowNudge {
   0%, 100% { transform: translateX(0); }
@@ -473,7 +456,7 @@ a.topbar-item:hover { color: var(--yellow-400); }
 }
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
 /* FAQ-button style effects on every primary action button site-wide:
-   breathing glow + continuous shine sweep */
+   breathing glow */
 .btn-primary,
 .btn-whatsapp,
 .cta-actions .btn-light,
@@ -483,28 +466,12 @@ a.topbar-item:hover { color: var(--yellow-400); }
   overflow: hidden;
   animation: allPulse 2.6s ease-in-out infinite;
 }
-.btn-primary::after,
-.btn-whatsapp::after,
-.cta-actions .btn-light::after,
-.chap-cta::after,
-.mq-btn::after {
-  content: '';
-  position: absolute;
-  top: 0; left: -85%;
-  width: 50%; height: 100%;
-  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.45), transparent);
-  transform: skewX(-20deg);
-  animation: btnShine 2.8s ease-in-out infinite;
-  pointer-events: none;
-}
 @keyframes allPulse {
   0%, 100% { box-shadow: 0 5px 14px rgba(30, 70, 32, 0.16); }
   50% { box-shadow: 0 10px 26px rgba(245, 146, 30, 0.42); }
 }
 @media (prefers-reduced-motion: reduce) {
   .btn-primary, .btn-whatsapp, .cta-actions .btn-light, .chap-cta, .mq-btn { animation: none; }
-  .btn-primary::after, .btn-whatsapp::after, .cta-actions .btn-light::after,
-  .chap-cta::after, .mq-btn::after { display: none; }
   .btn::before, .service-card::after { display: none; }
 }
 
@@ -576,21 +543,6 @@ a.topbar-item:hover { color: var(--yellow-400); }
   border-top: 3px solid var(--yellow-400);
   border-bottom: 3px solid var(--yellow-400);
   padding: 0.8rem 0 0.85rem;
-}
-/* Light beam sweeping across the strip so the USP band catches the eye */
-.trust-strip::after {
-  content: '';
-  position: absolute;
-  top: 0; left: -30%;
-  width: 18%; height: 100%;
-  background: linear-gradient(115deg, transparent, rgba(247, 201, 72, 0.14), transparent);
-  transform: skewX(-18deg);
-  animation: trustSweep 5s ease-in-out infinite;
-  pointer-events: none;
-}
-@keyframes trustSweep {
-  0% { left: -30%; }
-  60%, 100% { left: 130%; }
 }
 .trust-title {
   text-align: center;
