@@ -132,6 +132,33 @@ async function sendWhatsAppAlert(d) {
   return { sent: true };
 }
 
+// Real-time Telegram alert to the owner. Configure TELEGRAM_BOT_TOKEN and
+// TELEGRAM_CHAT_ID in Vercel. Skipped silently when not configured.
+async function sendTelegramAlert(d) {
+  const token = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!token || !chatId) return { skipped: true };
+  const text =
+    '🔔 New Website Enquiry — Nimbark\n\n' +
+    `👤 Name: ${d.name}\n` +
+    `📞 Phone: ${d.phone}\n` +
+    `📧 Email: ${d.email}\n` +
+    (d.service ? `🛠 Service: ${d.service}\n` : '') +
+    (d.message ? `📝 Message: ${d.message.slice(0, 400)}\n` : '') +
+    `🕐 ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST`;
+  const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatId, text, disable_web_page_preview: true }),
+  });
+  if (!res.ok) {
+    const detail = await res.text().catch(() => '');
+    console.error(`Telegram alert failed (${res.status}): ${detail.slice(0, 200)}`);
+    return { failed: true };
+  }
+  return { sent: true };
+}
+
 function notificationHtml(d) {
   const row = (label, value) =>
     `<tr><td style="padding:8px 14px;font-weight:600;color:#1e4620;white-space:nowrap;vertical-align:top;">${label}</td>` +
@@ -238,6 +265,7 @@ module.exports = async function handler(req, res) {
       html: autoReplyHtml(data),
     }),
     sendWhatsAppAlert(data),
+    sendTelegramAlert(data),
   ]);
   results.forEach((r) => {
     if (r.status === 'rejected') console.error('Email error:', r.reason);
