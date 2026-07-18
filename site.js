@@ -15,10 +15,12 @@
   // the office is directly opposite it, so navigation lands at the right spot.
   var MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=' +
     encodeURIComponent('Gate No. 3, Kurukshetra University, Kurukshetra, Haryana 136119');
+  // Social profiles — leave a value empty ('') to hide that icon until the
+  // account exists. Fill in the real link and the icon appears automatically.
   var SOCIAL = {
-    facebook: 'https://www.facebook.com/nimbarkinsights',
-    instagram: 'https://www.instagram.com/nimbarkinsights',
-    youtube: 'https://www.youtube.com/@nimbarkinsights'
+    facebook: 'https://www.facebook.com/profile.php?id=61592094057940',
+    instagram: '',
+    youtube: ''
   };
   // Google Analytics 4 measurement ID (e.g. 'G-XXXXXXXXXX').
   // Leave empty to keep analytics off; set it and every page starts tracking.
@@ -78,9 +80,9 @@
           '<a href="mailto:' + EMAIL + '" class="topbar-item">' + ICON.mail + EMAIL + '</a>' +
         '</div>' +
         '<div class="topbar-right topbar-social">' +
-          '<a href="' + SOCIAL.facebook + '" target="_blank" rel="noopener" class="soc soc-fb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.1h2.9l.5-3.7h-3.4V7.9c0-1 .3-1.8 1.9-1.8h1.6V2.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.6v2.9H7v3.7h3V22z"/></svg></a>' +
-          '<a href="' + SOCIAL.instagram + '" target="_blank" rel="noopener" class="soc soc-ig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 5a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 1.8a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5-3.1a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/></svg></a>' +
-          '<a href="' + SOCIAL.youtube + '" target="_blank" rel="noopener" class="soc soc-yt" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>' +
+          (SOCIAL.facebook ? '<a href="' + SOCIAL.facebook + '" target="_blank" rel="noopener" class="soc soc-fb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.1h2.9l.5-3.7h-3.4V7.9c0-1 .3-1.8 1.9-1.8h1.6V2.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.6v2.9H7v3.7h3V22z"/></svg></a>' : '') +
+          (SOCIAL.instagram ? '<a href="' + SOCIAL.instagram + '" target="_blank" rel="noopener" class="soc soc-ig" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 5a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 1.8a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5-3.1a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/></svg></a>' : '') +
+          (SOCIAL.youtube ? '<a href="' + SOCIAL.youtube + '" target="_blank" rel="noopener" class="soc soc-yt" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12z"/></svg></a>' : '') +
           '<a href="' + MAPS_URL + '" target="_blank" rel="noopener" class="soc soc-map" aria-label="Find us on Google Maps">' +
             '<svg viewBox="0 0 24 24"><defs><clipPath id="mpin"><path d="M12 1.8a7.2 7.2 0 0 0-7.2 7.2c0 5.4 7.2 13.2 7.2 13.2s7.2-7.8 7.2-13.2A7.2 7.2 0 0 0 12 1.8z"/></clipPath></defs>' +
             '<g clip-path="url(#mpin)">' +
