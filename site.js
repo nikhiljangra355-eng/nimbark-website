@@ -19,7 +19,7 @@
   // account exists. Fill in the real link and the icon appears automatically.
   var SOCIAL = {
     facebook: 'https://www.facebook.com/profile.php?id=61592094057940',
-    instagram: '',
+    instagram: 'https://www.instagram.com/nimbarkinsights',
     youtube: ''
   };
   // Google Analytics 4 measurement ID (e.g. 'G-XXXXXXXXXX').
